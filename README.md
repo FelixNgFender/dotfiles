@@ -34,6 +34,10 @@ nvtop, cuda toolkit
 
 ghidra, wireshark
 
+### Gaming
+
+sunshine
+
 ### Misc
 
 rclone, globalprotect
