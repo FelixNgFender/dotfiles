@@ -9,6 +9,13 @@ chmod u+x ./install.sh
 ./install.sh
 ```
 
+## Enable rclone systemd service
+
+```shell
+systemctl --user daemon-reload
+systemctl --user enable --now rclone.{timer,path,service}
+```
+
 ## Standalone apps
 
 ### Music
