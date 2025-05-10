@@ -5,3 +5,4 @@ stow ghostty
 stow git
 stow mise
 stow nvim
+stow rclone
