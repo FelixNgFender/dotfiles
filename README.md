@@ -2,7 +2,8 @@
 
 ## Quick start
 
-If on Ubuntu, install Omakub. Then install Ghostty and Homebrew, then do this:
+If on Ubuntu, install Omakub. Then install Ghostty, starship, and Homebrew, then
+do this:
 
 ```shell
 chmod u+x ./install.sh
