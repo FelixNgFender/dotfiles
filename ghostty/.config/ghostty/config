@@ -1,0 +1,79 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /home/felixngfender/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+# appearance
+theme = tokyonight_night
+gtk-titlebar = false
+window-padding-x = 10
+background-opacity = 0.98
+
+# navigation: mimics zellij
+# tabs
+keybind = ctrl+t>n=new_tab
+keybind = ctrl+t>x=close_tab
+keybind = ctrl+t>h=previous_tab
+keybind = ctrl+t>l=next_tab
+
+# split
+keybind = ctrl+p>n=new_split:auto
+keybind = ctrl+p>x=close_window
+keybind = ctrl+p>r=new_split:right
+keybind = ctrl+p>d=new_split:down
+keybind = ctrl+p>h=goto_split:left
+keybind = ctrl+p>j=goto_split:down
+keybind = ctrl+p>k=goto_split:up
+keybind = ctrl+p>l=goto_split:right
+keybind = ctrl+p>f=toggle_split_zoom
+# more convenient split navigation
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+
+# scrollback
+keybind = ctrl+s>j=scroll_page_lines:1
+keybind = ctrl+s>k=scroll_page_lines:-1
+keybind = ctrl+s>d=scroll_page_fractional:0.5
+keybind = ctrl+s>u=scroll_page_fractional:-0.5
+keybind = ctrl+s>e=write_scrollback_file:open

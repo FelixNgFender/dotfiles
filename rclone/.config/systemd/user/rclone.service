@@ -1,0 +1,15 @@
+[Unit]
+Description=Syncing local files with Google Drive using rclone bisync
+Documentation=man:rclone(1)
+After=network-online.target
+Wants=network-online.target 
+StartLimitIntervalSec=60
+StartLimitBurst=1
+
+[Service]
+Type=oneshot
+ExecStart= \
+rclone bisync ngthinh302-gdrive:"College Documents" %h/Documents/"College Documents"
+	
+[Install]
+WantedBy=default.target

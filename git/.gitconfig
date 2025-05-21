@@ -1,0 +1,10 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[pull]
+	rebase = true
+[user]
+	email = ngthinh302@gmail.com
+	name = felixngfender
