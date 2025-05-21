@@ -1,152 +1,221 @@
-# https://starship.rs/config/
-# fredericrous
+format = """
+[╭](fg:current_line)\
+$os\
+$directory\
+$git_branch\
+$fill\
+$docker_context\
+$nodejs\
+$buf\
+$bun\
+$deno\
+$dotnet\
+$python\
+$java\
+$zig\
+$rust\
+$golang\
+$lua\
+$c\
+$cpp\
+$aws\
+$cmd_duration\
+$shell\
+$time\
+$username\
+$line_break\
+$character\
+"""
 
-command_timeout = 1000
-right_format = """$time"""
+palette = 'dracula'
+# palette = 'catppuccin_mocha'
+# palette = 'tokyo_night'
+add_newline = true
 
-[time]
+[palettes.dracula]
+foreground = '#F8F8F2'
+background = '#282A36'
+current_line = '#44475A'
+primary = '#1E1F29'
+box = '#44475A'
+blue = '#6272A4'
+cyan = '#8BE9FD'
+green = '#50FA7B'
+orange = '#FFB86C'
+pink = '#FF79C6'
+purple = '#BD93F9'
+red = '#FF5555'
+yellow = '#F1FA8C'
+
+[palettes.catppuccin_mocha]
+foreground = '#D9E0EE'
+background = '#1E1E2E'
+current_line = '#2E2E3E'
+primary = '#313244'
+box = '#2E2E3E'
+blue = '#8AADF4'
+cyan = '#76E3F6'
+green = '#A6E3A1'
+orange = '#F9AF74'
+pink = '#F5BDE6'
+purple = '#CBA6F7'
+red = '#F38BA8'
+yellow = '#F9E2AF'
+status = "#e23140"
+
+[palettes.tokyo_night]
+foreground = '#D8D8D8'
+background = '#1A1B26'
+current_line = '#2A2C37'
+primary = '#292E42'
+box = '#2A2C37'
+blue = '#7AA2F7'
+cyan = '#7FDBCA'
+green = '#98C379'
+orange = '#FF9E64'
+pink = '#FF75A0'
+purple = '#BB80B3'
+red = '#F7768E'
+yellow = '#E5C07B'
+status = "#e23140"
+
+[os]
+format = '(fg:current_line)[](fg:red)[$symbol ](fg:primary bg:red)[](fg:red)'
 disabled = false
-style = "#939594"
-format = "[$time]($style)"
 
-[aws]
-style = "bg:#f9a600 fg:black"
-symbol = "☁ "
-format = "[](fg:black bg:#f9a600)[$symbol$profile]($style)[](fg:#f9a600 bg:black)"
-
-[character]
-success_symbol = "[❯](#ff9400)"
-error_symbol = "[✗](#ff4b00)"
-
-[cmd_duration]
-style = "#f9a600"
-format = "[](fg:black bg:#f9a600)[祥$duration](bg:$style fg:black)[](fg:$style)"
+[os.symbols]
+Alpine = ''
+Amazon = ''
+Android = ''
+Arch = ''
+CentOS = ''
+Debian = ''
+EndeavourOS = ''
+Fedora = ''
+FreeBSD = ''
+Garuda = ''
+Gentoo = ''
+Linux = ''
+Macos = ''
+Manjaro = ''
+Mariner = ''
+Mint = ''
+NetBSD = ''
+NixOS = ''
+OpenBSD = ''
+OpenCloudOS = ''
+openEuler = ''
+openSUSE = ''
+OracleLinux = '⊂⊃'
+Pop = ''
+Raspbian = ''
+Redhat = ''
+RedHatEnterprise = ''
+Solus = ''
+SUSE = ''
+Ubuntu = ''
+Unknown = ''
+Windows = ''
 
 [directory]
-style = "#c05303"
-truncate_to_repo = false
-fish_style_pwd_dir_length = 1
-format = "[](fg:black bg:#c05303)[$path[$read_only](bg:$style fg:black)](bg:$style fg:black)[](fg:$style)"
-read_only = " "
-
-[docker_context]
-style = "fg:black bg:#eb9606"
-symbol = "🐳  "
-format = "[](fg:black bg:#eb9606)[$symbol$context]($style)[](fg:#eb9606)"
+format = '[─](fg:current_line)[](fg:pink)[󰷏 ](fg:primary bg:pink)[](fg:pink bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
+home_symbol = " ~/"
+truncation_symbol = ' '
+truncation_length = 2
+read_only = '󱧵 '
+read_only_style = ''
 
 [git_branch]
-style = "#d8712c"
-format = "[](fg:black bg:$style)[ $symbol$branch](fg:black bg:$style)[](fg:$style)"
-
-[git_commit]
-style = "#d8712c"
-format = "\b[ ](bg:$style)[\\($hash$tag\\)](fg:black bg:$style)[](fg:$style)"
-
-[git_state]
-style = "#d8712c"
-format = "\b[ ](bg:$style)[ \\($state( $progress_current/$progress_total)\\)](fg:black bg:$style)[](fg:$style)"
-
-[git_status]
-style = "#d8712c"
-format = "(\b[ ](bg:$style fg:black)$conflicted$staged$modified$renamed$deleted$untracked$stashed$ahead_behind[](fg:$style))"
-conflicted = "[ ](bold fg:88 bg:#d8712c)[  ${count} ](fg:black bg:#d8712c)"
-staged = "[ $count ](fg:black bg:#d8712c)"
-modified = "[ ${count} ](fg:black bg:#d8712c)"
-renamed = "[ ${count} ](fg:black bg:#d8712c)"
-deleted = "[ ${count} ](fg:black bg:#d8712c)"
-untracked = "[?${count} ](fg:black bg:#d8712c)"
-stashed = "[ ${count} ](fg:black bg:#d8712c)"
-ahead = "[ ${count} ](fg:#523333 bg:#d8712c)"
-behind = "[ ${count} ](fg:black bg:#d8712c)"
-diverged = "[ ](fg:88 bg:#d8712c)[ נּ ](fg:black bg:#d8712c)[ ${ahead_count} ](fg:black bg:#d8712c)[ ${behind_count} ](fg:black bg:#d8712c)"
-
-[golang]
-symbol = "ﳑ "
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
-
-[helm]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol($version)]($style)[](fg:#eb9606)"
-
-[java]
-symbol = " "
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
-
-[kotlin]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
-
-[kubernetes]
-format = "[](fg:black bg:#ad4007)[$symbol$context](fg:black bg:#ad4007)[](fg:#ad4007)"
-disabled = false
-
-# [memory_usage]
-# style = "#f9a600"
-# symbol = " "
-# format = "[](fg:black bg:#f9a600)[$symbol$ram](bg:$style fg:black)[](fg:$style)"
-# threshold = 95
-# disabled = false
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)[](fg:box)'
+symbol = ' '
 
 [nodejs]
-style = "green"
-format = "[](fg:black bg:#eb9606)[$symbol($version)](fg:black bg:#eb9606)[](fg:#eb9606)"
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = '󰎙 Node.js'
 
-[ocaml]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
+[bun]
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' Bun'
 
-[package]
-disabled = true
+[deno]
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' Deno'
 
-[php]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
+[docker_context]
+format = '[─](fg:current_line)[](fg:blue)[$symbol](fg:primary bg:blue)[](fg:blue bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = " "
+
+[zig]
+format = '[─](fg:current_line)[](fg:yellow)[$symbol](fg:primary bg:yellow)[](fg:yellow bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' Zig'
+
+[dotnet]
+format = '[─](fg:current_line)[](fg:purple)[$symbol](fg:primary bg:purple)[](fg:purple bg:box)[ $tfm](fg:foreground bg:box)[](fg:box)'
+symbol = ' .NET'
 
 [python]
-symbol = " "
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$pyenv_prefix$version$virtualenv]($style)[](fg:#eb9606)"
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' python'
 
-[ruby]
-symbol = " "
-format = "[](fg:black bg:#eb9606)[$symbol$version](fg:black bg:#eb9606)(fg:black bg:#eb9606)[](fg:#eb9606)"
+[java]
+format = '[─](fg:current_line)[](fg:red)[$symbol](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' Java'
 
 [rust]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
+format = '[─](fg:current_line)[](fg:red)[$symbol](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' Rust'
 
-[scala]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
+[golang]
+format = '[─](fg:current_line)[](fg:blue)[$symbol](fg:primary bg:blue)[](fg:blue bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' Go'
 
-[swift]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
+[lua]
+format = '[─](fg:current_line)[](fg:purple)[$symbol](fg:primary bg:purple)[](fg:purple bg:box)[ $tfm](fg:foreground bg:box)[](fg:box)'
+symbol = ' Lua'
+
+[c]
+format = '[─](fg:current_line)[](fg:blue)[$symbol](fg:primary bg:blue)[](fg:blue bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' C'
+
+[cpp]
+format = '[─](fg:current_line)[](fg:blue)[$symbol](fg:primary bg:blue)[](fg:blue bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' C++'
+
+[buf]
+format = '[─](fg:current_line)[](fg:blue)[$symbol](fg:primary bg:blue)[](fg:blue bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = " Buf"
+
+[aws]
+format = '[─](fg:current_line)[](fg:orange)[$symbol](fg:primary bg:orange)[](fg:orange bg:box)[ $profile](fg:foreground bg:box)[](fg:box)'
+symbol = '  AWS'
+
+[fill]
+symbol = '─'
+style = 'fg:current_line'
+
+[cmd_duration]
+min_time = 500
+format = '[─](fg:current_line)[](fg:orange)[ ](fg:primary bg:orange)[](fg:orange bg:box)[ $duration ](fg:foreground bg:box)[](fg:box)'
 
 [shell]
-fish_indicator = ""
-bash_indicator = "bash "
-zsh_indicator = "zsh "
-powershell_indicator = ""
-format = "[$indicator](fg:#ad4007)"
-disabled = false
-[shlvl]
-symbol = " "
-style = "fg:black bg:#ad4007"
-format = "[](fg:black bg:#ad4007)[$symbol$shlvl]($style)[](fg:#ad4007)"
+format = '[─](fg:current_line)[](fg:blue)[ ](fg:primary bg:blue)[](fg:blue bg:box)[ $indicator](fg:foreground bg:box)[](fg:box)'
+unknown_indicator = 'shell'
+powershell_indicator = 'powershell'
+fish_indicator = 'fish'
 disabled = false
 
-[terraform]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$workspace]($style)[](fg:#eb9606)"
+[time]
+format = '[─](fg:current_line)[](fg:purple)[󰦖 ](fg:primary bg:purple)[](fg:purple bg:box)[ $time](fg:foreground bg:box)[](fg:box)'
+time_format = '%H:%M'
+disabled = false
 
 [username]
-style_user = "#0370C0"
-style_root = "#C00311"
-format = "[](fg:black bg:$style)[$user](fg:black bg:$style)[](fg:$style)"
+format = '[─](fg:current_line)[](fg:yellow)[ ](fg:primary bg:yellow)[](fg:yellow bg:box)[ $user](fg:foreground bg:box)[](fg:box) '
+show_always = true
 
-[vagrant]
-style = "fg:black bg:#eb9606"
-format = "[](fg:black bg:#eb9606)[$symbol$version]($style)[](fg:#eb9606)"
+[character]
+format = """
+[╰─$symbol](fg:current_line) """
+success_symbol = '[λ](fg:bold white)'
+error_symbol = '[×](fg:bold red)'
+
