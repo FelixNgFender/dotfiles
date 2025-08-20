@@ -41,7 +41,7 @@ sunshine, moonlight
 
 ### Misc
 
-rclone, globalprotect
+keyd, rclone, globalprotect
 
 ## How stow works
 
