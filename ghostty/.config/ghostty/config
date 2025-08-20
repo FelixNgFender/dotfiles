@@ -43,6 +43,8 @@
 # resize-overlay-duration = 4s 200ms
 
 # appearance
+# to grab this from wmctrl
+title = "Felix Ghostty"
 theme = tokyonight_night
 gtk-titlebar = false
 window-padding-x = 10
