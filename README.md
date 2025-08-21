@@ -41,7 +41,7 @@ sunshine, moonlight
 
 ### Misc
 
-wmctrl, keyd, rclone, globalprotect
+websocat (for typst-preview), wmctrl, keyd, rclone, globalprotect
 
 ## How stow works
 
