@@ -1,7 +1,7 @@
 [tools]
 go = "latest"
 java = "21"
-node = "lts"
+node = "latest"
 python = "latest"
 uv = "latest"
 
