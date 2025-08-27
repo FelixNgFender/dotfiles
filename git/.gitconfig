@@ -8,3 +8,5 @@
 [user]
 	email = ngthinh302@gmail.com
 	name = felixngfender
+[init]
+	defaultBranch = main
