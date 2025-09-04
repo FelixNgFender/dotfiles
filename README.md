@@ -19,6 +19,10 @@ systemctl --user enable --now rclone.{timer,path,service}
 
 ## Standalone apps
 
+### AI
+
+opencode
+
 ### Music
 
 reaper, neural dsp, yabridge, bunch of other VSTs i think.
