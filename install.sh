@@ -8,6 +8,7 @@ sudo stow -t / keyd
 stow mise
 stow nvim
 stow rclone
+stow opencode
 stow starship
 
 sudo keyd reload
