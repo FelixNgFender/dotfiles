@@ -8,3 +8,6 @@ alias rclone-gdrive-redry='rclone bisync ngthinh302-gdrive:College\ Documents ~/
 
 # ghidra
 alias ghidra='~/workplaces/ghidra_11.3.1_PUBLIC/ghidraRun'
+
+# pnpm
+alias pn="pnpm"
