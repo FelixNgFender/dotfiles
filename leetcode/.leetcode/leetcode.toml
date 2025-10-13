@@ -1,0 +1,15 @@
+[code]
+editor = "n"
+test = true
+lang = "python"
+
+[cookies]
+csrf = ""
+session = ""
+site = "leetcode.com"
+
+[storage]
+cache = "Problems"
+code = "code"
+root = "~/.leetcode"
+scripts = "scripts"

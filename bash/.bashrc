@@ -43,3 +43,6 @@ eval "$(uvx --generate-shell-completion bash)"
 
 # starship
 eval "$(starship init bash)"
+
+# leetcode-cli
+eval "$(leetcode completions)"

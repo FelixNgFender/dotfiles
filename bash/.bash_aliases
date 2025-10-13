@@ -11,3 +11,6 @@ alias ghidra='~/workplaces/ghidra_11.3.1_PUBLIC/ghidraRun'
 
 # pnpm
 alias pn="pnpm"
+
+# leetcode-cli
+alias lc="leetcode"
