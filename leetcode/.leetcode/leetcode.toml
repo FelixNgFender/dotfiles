@@ -16,7 +16,7 @@ session = ""
 site = "leetcode.com"
 
 [storage]
+root = "~/.leetcode"
 cache = "Problems"
 code = "code"
-root = "~/.leetcode"
 scripts = "scripts"

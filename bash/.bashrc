@@ -25,7 +25,7 @@ function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
   if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd"
+    builtin cd -- "$cwd" || exit
   fi
   rm -f -- "$tmp"
 }
@@ -46,6 +46,6 @@ eval "$(uvx --generate-shell-completion bash)"
 eval "$(starship init bash)"
 
 # leetcode-cli
-eval "$(leetcode completions)"
 export LEETCODE_CSRF=$LEETCODE_CSRF
 export LEETCODE_SESSION=$LEETCODE_SESSION
+eval "$(leetcode completions)"
