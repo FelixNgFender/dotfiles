@@ -1,3 +1,4 @@
+source ~/.env
 source ~/.local/share/omakub/defaults/bash/rc
 
 # Editor used by CLI
@@ -46,3 +47,5 @@ eval "$(starship init bash)"
 
 # leetcode-cli
 eval "$(leetcode completions)"
+export LEETCODE_CSRF=$LEETCODE_CSRF
+export LEETCODE_SESSION=$LEETCODE_SESSION

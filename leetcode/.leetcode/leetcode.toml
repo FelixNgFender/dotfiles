@@ -1,5 +1,5 @@
 [code]
-editor = "n"
+editor = "nvim"
 test = true
 lang = "python"
 

@@ -5,6 +5,7 @@ stow ghostty
 stow git
 # tells stow to symlink to '/' instead of '..'
 sudo stow -t / keyd
+stow leetcode
 stow mise
 stow nvim
 stow rclone
