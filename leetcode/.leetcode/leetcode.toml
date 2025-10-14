@@ -1,7 +1,14 @@
 [code]
 editor = "nvim"
-test = true
 lang = "python"
+edit_code_marker = true
+start_marker = "solution_start"
+end_marker = "solution_end"
+# if include problem description
+comment_problem_desc = true
+# comment syntax
+comment_leading = "#"
+test = true
 
 [cookies]
 csrf = ""
