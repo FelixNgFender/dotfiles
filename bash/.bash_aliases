@@ -14,3 +14,5 @@ alias pn="pnpm"
 
 # leetcode-cli
 alias lc="leetcode"
+alias lce="leetcode edit"
+alias lcx="leetcode exec"

@@ -4,6 +4,11 @@ source ~/.local/share/omakub/defaults/bash/rc
 # Editor used by CLI
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
+
+# mise
+eval "$(mise activate bash)"
+
+# cargo
 . "$HOME/.cargo/env"
 
 # yabridge

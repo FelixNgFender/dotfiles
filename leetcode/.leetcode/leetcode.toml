@@ -1,6 +1,6 @@
 [code]
 editor = "nvim"
-lang = "python"
+lang = "python3"
 edit_code_marker = true
 start_marker = "solution_start"
 end_marker = "solution_end"
@@ -9,6 +9,7 @@ comment_problem_desc = true
 # comment syntax
 comment_leading = "#"
 test = true
+inject_before = ["from typing import List"]
 
 [cookies]
 csrf = ""
