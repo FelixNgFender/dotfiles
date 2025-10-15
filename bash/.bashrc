@@ -5,9 +5,6 @@ source ~/.local/share/omakub/defaults/bash/rc
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
-# mise
-eval "$(mise activate bash)"
-
 # cargo
 . "$HOME/.cargo/env"
 
@@ -46,6 +43,9 @@ esac
 # uv
 eval "$(uv generate-shell-completion bash)"
 eval "$(uvx --generate-shell-completion bash)"
+
+# fzf
+eval "$(fzf --bash)"
 
 # starship
 eval "$(starship init bash)"
