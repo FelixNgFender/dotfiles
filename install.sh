@@ -11,5 +11,6 @@ stow nvim
 stow rclone
 stow opencode
 stow starship
+gshortcuts import gnome-shortcuts.yaml
 
 sudo keyd reload

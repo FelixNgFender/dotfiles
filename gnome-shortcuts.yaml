@@ -1,0 +1,151 @@
+builtin:
+    org.gnome.desktop.wm.keybindings:
+        - key: begin-resize
+          bindings:
+            - <Super>BackSpace
+        - key: move-to-workspace-10
+          bindings:
+            - <Super><Shift>0
+        - key: move-to-workspace-6
+          bindings:
+            - <Super><Shift>6
+        - key: move-to-workspace-7
+          bindings:
+            - <Super><Shift>7
+        - key: switch-input-source
+          bindings: []
+        - key: move-to-workspace-8
+          bindings:
+            - <Super><Shift>8
+        - key: move-to-workspace-9
+          bindings:
+            - <Super><Shift>9
+        - key: maximize
+          bindings:
+            - <Super>Up
+        - key: close
+          bindings:
+            - <Super>w
+        - key: switch-to-workspace-1
+          bindings:
+            - <Super>1
+        - key: switch-to-workspace-2
+          bindings:
+            - <Super>2
+        - key: move-to-workspace-1
+          bindings:
+            - <Super><Shift>1
+        - key: switch-to-workspace-3
+          bindings:
+            - <Super>3
+        - key: move-to-workspace-2
+          bindings:
+            - <Super><Shift>2
+        - key: switch-to-workspace-left
+          bindings:
+            - <Super>Page_Up
+            - <Super><Alt>Left
+        - key: switch-to-workspace-right
+          bindings:
+            - <Super>Page_Down
+            - <Super><Alt>Right
+        - key: switch-to-workspace-4
+          bindings:
+            - <Super>4
+        - key: move-to-workspace-3
+          bindings:
+            - <Super><Shift>3
+        - key: switch-input-source-backward
+          bindings: []
+        - key: switch-to-workspace-5
+          bindings:
+            - <Super>5
+        - key: move-to-workspace-4
+          bindings:
+            - <Super><Shift>4
+        - key: toggle-fullscreen
+          bindings:
+            - <Shift>F11
+        - key: switch-to-workspace-6
+          bindings:
+            - <Super>6
+        - key: move-to-workspace-5
+          bindings:
+            - <Super><Shift>5
+    org.gnome.shell.keybindings:
+        - key: switch-to-application-1
+          bindings:
+            - <Alt>1
+        - key: switch-to-application-7
+          bindings:
+            - <Alt>7
+        - key: switch-to-application-4
+          bindings:
+            - <Alt>4
+        - key: switch-to-application-2
+          bindings:
+            - <Alt>2
+        - key: switch-to-application-5
+          bindings:
+            - <Alt>5
+        - key: switch-to-application-8
+          bindings:
+            - <Alt>8
+        - key: switch-to-application-3
+          bindings:
+            - <Alt>3
+        - key: switch-to-application-6
+          bindings:
+            - <Alt>6
+        - key: switch-to-application-9
+          bindings:
+            - <Alt>9
+custom:
+    - id: custom-keybindings/custom0
+      name: Ulauncher
+      binding: <Super>space
+      command: ulauncher-toggle
+    - id: custom-keybindings/custom1
+      name: Flameshot
+      binding: <Control>Print
+      command: sh -c -- "flameshot gui"
+    - id: custom-keybindings/custom4
+      name: Apple Brightness Down (ASDControl)
+      binding: <Control>F1
+      command: sh -c 'asdcontrol $(asdcontrol --detect /dev/usb/hiddev* 2>/dev/null | sed -n "s|^\(/dev/usb/hiddev[0-9]*\):.*|\1|p") -- -5000'
+    - id: custom-keybindings/custom5
+      name: Apple Brightness Up (ASDControl)
+      binding: <Control>F2
+      command: sh -c 'asdcontrol $(asdcontrol --detect /dev/usb/hiddev* 2>/dev/null | sed -n "s|^\(/dev/usb/hiddev[0-9]*\):.*|\1|p") -- +5000'
+    - id: custom-keybindings/custom7
+      name: Music
+      binding: <Shift><Control><Alt><Super>m
+      command: spotify
+    - id: custom-keybindings/custom6
+      name: Signal
+      binding: <Shift><Control><Alt><Super>c
+      command: sh -c -- "wmctrl -a "Signal" || signal-desktop"
+    - id: custom-keybindings/custom2
+      name: Ghostty
+      binding: <Shift><Control><Alt><Super>t
+      command: sh -c -- "wmctrl -a \"Felix Ghostty\" || ghostty"
+    - id: custom-keybindings/custom3
+      name: Firefox
+      binding: <Shift><Control><Alt><Super>b
+      command: sh -c -- "wmctrl -a "Firefox" || firefox"
+    - id: custom-keybindings/custom8
+      name: Discord
+      binding: <Shift><Control><Alt><Super>d
+      command: sh -c -- "wmctrl -a "Discord" || discord"
+    - id: custom-keybindings/custom9
+      name: Thunderbird
+      binding: <Shift><Control><Alt><Super>o
+      command: sh -c -- "wmctrl -a \"Mozilla Thunderbird\" || thunderbird"
+    - id: custom-keybindings/custom10
+      name: Reaper
+      binding: <Shift><Control><Alt><Super>r
+      command: sh -c -- "wmctrl -a REAPER  || reaper"
+    - id: custom-keybindings/custom11
+      name: Visual Studio Code
+      binding: <Shift><Control><Alt><Super>v
+      command: sh -c -- "wmctrl -a \"Visual Studio Code\" || code"
