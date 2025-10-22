@@ -45,8 +45,8 @@ sunshine, moonlight
 
 ### Misc
 
-fcitx5 (for keyboards), websocat (for typst-preview), wmctrl, keyd, rclone,
-globalprotect
+adb (android debug), fcitx5 (for keyboards), websocat (for typst-preview),
+wmctrl, keyd, rclone, globalprotect
 
 ## How stow works
 
