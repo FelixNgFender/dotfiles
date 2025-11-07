@@ -17,3 +17,6 @@ alias lc="leetcode"
 alias lce="leetcode edit"
 alias lct="leetcode test"
 alias lcx="leetcode exec"
+
+# python
+alias avenv="source .venv/bin/activate"
