@@ -8,3 +8,4 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 vim.opt.wrap = true
+vim.g.lazyvim_python_lsp = "basedpyright"
