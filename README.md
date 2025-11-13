@@ -33,7 +33,7 @@ kdenlive
 
 ### GPU programming
 
-nvtop, cuda toolkit
+nvtop, cuda toolkit, leetgpu cli
 
 ### Hacking
 
