@@ -44,6 +44,7 @@ esac
 # uv
 eval "$(uv generate-shell-completion bash)"
 eval "$(uvx --generate-shell-completion bash)"
+eval "$(ty generate-shell-completion bash)"
 
 # fzf
 eval "$(fzf --bash)"
