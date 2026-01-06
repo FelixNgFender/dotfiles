@@ -8,3 +8,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 vim.opt.wrap = true
+
+-- Required: Enable the language server
+vim.lsp.enable("ty")
