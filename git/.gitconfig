@@ -12,3 +12,7 @@
 	defaultBranch = main
 [credential]
 	helper = store
+[lfs "customtransfer.xet"]
+	path = git-xet
+	args = transfer
+	concurrent = true
