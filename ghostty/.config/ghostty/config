@@ -45,10 +45,11 @@
 # appearance
 # to grab this from wmctrl
 title = "Felix Ghostty"
-theme = tokyonight_night
+theme = "TokyoNight Night"
 gtk-titlebar = false
 window-padding-x = 10
 background-opacity = 0.98
+shell-integration-features = ssh-env,ssh-terminfo
 
 # navigation: mimics zellij
 # tabs
@@ -59,7 +60,7 @@ keybind = ctrl+t>l=next_tab
 
 # split
 keybind = ctrl+p>n=new_split:auto
-keybind = ctrl+p>x=close_window
+keybind = ctrl+p>x=close_surface
 keybind = ctrl+p>r=new_split:right
 keybind = ctrl+p>d=new_split:down
 keybind = ctrl+p>h=goto_split:left
