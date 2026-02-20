@@ -5,7 +5,7 @@ python = "latest"
 usage = "latest"
 uv = "latest"
 # rust
-rust = "latest"
+rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src" }
 cargo-binstall = "latest"
 # typst tooling
 typst = "latest"
