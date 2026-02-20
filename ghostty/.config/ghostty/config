@@ -49,7 +49,7 @@ theme = "TokyoNight Night"
 gtk-titlebar = false
 window-padding-x = 10
 background-opacity = 0.98
-shell-integration-features = ssh-env,ssh-terminfo
+shell-integration-features = ssh-terminfo,ssh-env
 
 # navigation: mimics zellij
 # tabs

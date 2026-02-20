@@ -45,9 +45,7 @@ sunshine, moonlight
 
 ### Misc
 
-adb (android debug), fcitx5 (for keyboards), handy (voice typing, configure
-hyper + q trigger), websocat (for typst-preview), wmctrl, keyd, rclone,
-globalprotect
+adb (android debug), fcitx5 (for keyboards), wmctrl, keyd, rclone, globalprotect
 
 ## How stow works
 

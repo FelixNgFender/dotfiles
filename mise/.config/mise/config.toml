@@ -4,6 +4,22 @@ pnpm = "latest"
 python = "latest"
 usage = "latest"
 uv = "latest"
+# rust
+rust = "latest"
+cargo-binstall = "latest"
+# typst tooling
+typst = "latest"
+typstyle = "latest"
+websocat = "latest"
+# task runner
+"cargo:bacon" = "latest"
+# iso burner
+"cargo:caligula" = "latest"
+"cargo:leetcode-cli" = "latest"
+# loc counter
+tokei = "latest"
+# cli file manager
+yazi = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
