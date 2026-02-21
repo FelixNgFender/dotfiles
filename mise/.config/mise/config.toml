@@ -20,6 +20,8 @@ websocat = "latest"
 tokei = "latest"
 # cli file manager
 yazi = "latest"
+# check broken links
+lychee = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
