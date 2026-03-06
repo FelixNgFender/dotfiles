@@ -33,6 +33,11 @@ function y() {
   rm -f -- "$tmp"
 }
 
+# yt-dlp
+ytmp3() {
+  yt-dlp -x --audio-format mp3 "$@"
+}
+
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
