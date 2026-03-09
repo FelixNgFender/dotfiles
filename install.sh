@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
+brew install stow
+
 stow bash
 chmod u+x ~/.local/bin/nsys_easy.sh
+stow brew
+brew bundle --file ~/.Brewfile
+
 stow ghostty
 stow git
 # tells stow to symlink to '/' instead of '..'
@@ -15,3 +20,6 @@ stow starship
 gshortcuts import gnome-shortcuts.yaml
 
 sudo keyd reload
+
+systemctl --user daemon-reload
+systemctl --user enable --now rclone.{timer,path,service}

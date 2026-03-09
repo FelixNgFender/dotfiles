@@ -6,9 +6,6 @@ alias rclone-gdrive='rclone bisync ngthinh302-gdrive:College\ Documents ~/Docume
 alias rclone-gdrive-re='rclone bisync ngthinh302-gdrive:College\ Documents ~/Documents/College\ Documents --resync'
 alias rclone-gdrive-redry='rclone bisync ngthinh302-gdrive:College\ Documents ~/Documents/College\ Documents --resync --dry-run'
 
-# ghidra
-alias ghidra='~/workplaces/ghidra_11.3.1_PUBLIC/ghidraRun'
-
 # pnpm
 alias pn="pnpm"
 

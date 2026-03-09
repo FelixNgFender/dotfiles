@@ -1,0 +1,3 @@
+- revisit kmp
+  - <https://www.cs.emory.edu/~cheung/Courses/253/Syllabus/Text/Matching-KMP1.html>
+  - <https://leetcode.com/problems/subtree-of-another-tree/solutions/474425/javapython-2-solutions-naive-serialize-i-zm3s>

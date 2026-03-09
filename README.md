@@ -2,26 +2,15 @@
 
 ## Quick start
 
-If on Ubuntu, install Omakub. Then install Ghostty, starship, and Homebrew, then
-do this:
+If on Ubuntu, install Omakub. Then install Ghostty, gshortcuts, and Homebrew,
+then do this:
 
 ```shell
-chmod u+x ./install.sh
+chmod u+x ./*.sh
 ./install.sh
 ```
 
-## Enable rclone systemd service
-
-```shell
-systemctl --user daemon-reload
-systemctl --user enable --now rclone.{timer,path,service}
-```
-
 ## Standalone apps
-
-### AI
-
-opencode
 
 ### Music
 
@@ -33,11 +22,7 @@ kdenlive
 
 ### GPU programming
 
-nvtop, cuda toolkit, leetgpu cli
-
-### Hacking
-
-ghidra, wireshark
+cuda toolkit
 
 ### Gaming
 
@@ -45,7 +30,7 @@ sunshine, moonlight
 
 ### Misc
 
-adb (android debug), fcitx5 (for keyboards), wmctrl, keyd, rclone, globalprotect
+fcitx5 (for keyboards), wmctrl, keyd, globalprotect
 
 ## How stow works
 
