@@ -1,4 +1,5 @@
 tap "sst/tap"
+brew "caddy"
 brew "fzf"
 brew "gcc"
 brew "git-xet"
