@@ -30,7 +30,7 @@ sunshine, moonlight
 
 ### Misc
 
-fcitx5 (for keyboards), wmctrl, keyd, globalprotect
+tailscale, fcitx5 (for keyboards), wmctrl, keyd, globalprotect
 
 ## How stow works
 
