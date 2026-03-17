@@ -4,8 +4,8 @@ pnpm = "latest"
 python = "latest"
 usage = "latest"
 uv = "latest"
-# rust
 rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src" }
+go = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
