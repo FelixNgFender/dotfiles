@@ -153,3 +153,16 @@ custom:
     name: Visual Studio Code
     binding: <Shift><Control><Alt><Super>v
     command: sh -c -- "wmctrl -a \"Visual Studio Code\" || code"
+  - id: custom-keybindings/custom12
+    name: Navidrome
+    binding: <Shift><Control><Alt><Super>n
+    command: sh -c -- "wmctrl -a "Navidrome" || gtk-launch Navidrome.desktop"
+  - id: custom-keybindings/custom13
+    name: Paperless
+    binding: <Shift><Control><Alt><Super>p
+    command:
+      sh -c -- "wmctrl -a "Paperless-ngx" || gtk-launch Paperless-ngx.desktop"
+  - id: custom-keybindings/custom14
+    name: Immich
+    binding: <Shift><Control><Alt><Super>i
+    command: sh -c -- "wmctrl -a "Immich" || gtk-launch Immich.desktop"
