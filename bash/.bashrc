@@ -34,8 +34,8 @@ function y() {
 }
 
 # yt-dlp
-ytmp3() {
-  yt-dlp -x --audio-format mp3 "$@"
+ytaudio() {
+  yt-dlp -x --audio-format best "$@"
 }
 
 # pnpm
