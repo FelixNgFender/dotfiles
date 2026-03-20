@@ -154,9 +154,9 @@ custom:
     binding: <Shift><Control><Alt><Super>v
     command: sh -c -- "wmctrl -a \"Visual Studio Code\" || code"
   - id: custom-keybindings/custom12
-    name: Navidrome
+    name: Miniflux
     binding: <Shift><Control><Alt><Super>n
-    command: sh -c -- "wmctrl -a "Navidrome" || gtk-launch Navidrome.desktop"
+    command: sh -c -- "wmctrl -a "Miniflux" || gtk-launch Miniflux.desktop"
   - id: custom-keybindings/custom13
     name: Paperless
     binding: <Shift><Control><Alt><Super>p
