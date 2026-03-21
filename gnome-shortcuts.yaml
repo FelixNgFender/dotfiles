@@ -166,3 +166,7 @@ custom:
     name: Immich
     binding: <Shift><Control><Alt><Super>i
     command: sh -c -- "wmctrl -a "Immich" || gtk-launch Immich.desktop"
+  - id: custom-keybindings/custom15
+    name: Homepage
+    binding: <Shift><Control><Alt><Super>h
+    command: sh -c -- "wmctrl -a "felixbox" || gtk-launch Homepage.desktop"
