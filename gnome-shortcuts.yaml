@@ -142,9 +142,11 @@ custom:
     binding: <Shift><Control><Alt><Super>d
     command: sh -c -- "wmctrl -a "Discord" || discord"
   - id: custom-keybindings/custom10
-    name: Reaper
+    name: REAPER
     binding: <Shift><Control><Alt><Super>r
-    command: sh -c -- "wmctrl -a REAPER  || reaper"
+    command:
+      sh -c -- "wmctrl -a REAPER  || PIPEWIRE_LATENCY=\"128/48000\" pw-jack
+      reaper"
   - id: custom-keybindings/custom11
     name: Visual Studio Code
     binding: <Shift><Control><Alt><Super>v
