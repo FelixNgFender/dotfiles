@@ -141,10 +141,6 @@ custom:
     name: Discord
     binding: <Shift><Control><Alt><Super>d
     command: sh -c -- "wmctrl -a "Discord" || discord"
-  - id: custom-keybindings/custom9
-    name: Thunderbird
-    binding: <Shift><Control><Alt><Super>o
-    command: sh -c -- "wmctrl -a \"Mozilla Thunderbird\" || thunderbird"
   - id: custom-keybindings/custom10
     name: Reaper
     binding: <Shift><Control><Alt><Super>r
@@ -170,3 +166,13 @@ custom:
     name: Homepage
     binding: <Shift><Control><Alt><Super>h
     command: sh -c -- "wmctrl -a "felixbox" || gtk-launch Homepage.desktop"
+  - id: custom-keybindings/custom16
+    name: Zotero
+    binding: <Shift><Control><Alt><Super>z
+    command: sh -c -- "wmctrl -a Zotero  || zotero"
+  - id: custom-keybindings/custom9
+    name: Vaultwarden
+    binding: <Shift><Control><Alt><Super>g
+    command:
+      sh -c -- "wmctrl -a \"Vaultwarden Web\"  || gtk-launch
+      Vaultwarden.desktop"
