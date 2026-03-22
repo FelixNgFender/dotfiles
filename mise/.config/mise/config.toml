@@ -6,6 +6,7 @@ usage = "latest"
 uv = "latest"
 rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src" }
 go = "latest"
+pandoc = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

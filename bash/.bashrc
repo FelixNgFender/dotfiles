@@ -61,3 +61,7 @@ eval "$(starship init bash)"
 export LEETCODE_CSRF=$LEETCODE_CSRF
 export LEETCODE_SESSION=$LEETCODE_SESSION
 eval "$(leetcode completions)"
+
+# for use in nvim-zotcite
+export ZOTERO_PATH=$ZOTERO_PATH
+export ZOTERO_BIB=$ZOTERO_BIB
