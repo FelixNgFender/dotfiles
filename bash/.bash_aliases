@@ -17,3 +17,7 @@ alias lcx="leetcode exec"
 
 # python
 alias avenv="source .venv/bin/activate"
+
+# docker
+alias docku="docker compose up -d"
+alias dockd="docker compose down"
