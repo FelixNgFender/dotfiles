@@ -74,9 +74,3 @@ keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
 keybind = alt+l=goto_split:right
 
-# scrollback
-keybind = ctrl+s>j=scroll_page_lines:1
-keybind = ctrl+s>k=scroll_page_lines:-1
-keybind = ctrl+s>d=scroll_page_fractional:0.5
-keybind = ctrl+s>u=scroll_page_fractional:-0.5
-keybind = ctrl+s>e=write_scrollback_file:open
