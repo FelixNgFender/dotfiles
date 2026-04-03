@@ -19,8 +19,8 @@ alias lcx="leetcode exec"
 alias avenv="source .venv/bin/activate"
 
 # docker
-alias docku="docker compose up -d"
-alias dockd="docker compose down"
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
 
 # brew
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
