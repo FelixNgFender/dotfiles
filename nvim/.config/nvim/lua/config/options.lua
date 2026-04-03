@@ -11,3 +11,6 @@ vim.opt.wrap = true
 
 -- Required: Enable the language server
 vim.lsp.enable("ty")
+
+-- for minuet-ai.nvim
+vim.g.lazyvim_blink_main = true

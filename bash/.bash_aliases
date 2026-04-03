@@ -19,6 +19,7 @@ alias lcx="leetcode exec"
 alias avenv="source .venv/bin/activate"
 
 # docker
+alias dc="docker compose"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 
