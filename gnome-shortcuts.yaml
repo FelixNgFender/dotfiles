@@ -179,7 +179,7 @@ custom:
       sh -c -- "wmctrl -a \"Vaultwarden Web\"  || gtk-launch
       Vaultwarden.desktop"
   - id: custom-keybindings/custom17
-    name: AI
+    name: AI Chat
     binding: <Shift><Control><Alt><Super>a
     command:
-      sh -c -- "wmctrl -a \"Unsloth Studio\" || gtk-launch Unsloth.desktop"
+      sh -c -- "wmctrl -a \"Open WebUI\" || gtk-launch Open\ WebUI.desktop"

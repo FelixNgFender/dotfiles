@@ -1,4 +1,18 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "github-copilot/claude-sonnet-4.5"
+  "model": "github-copilot/claude-sonnet-4.5",
+  "provider": {
+    "dmr": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Docker Model Runner",
+      "options": {
+        "baseURL": "http://localhost:12434/v1"
+      },
+      "models": {
+        "huggingface.co/unsloth/gemma-4-e4b-it-gguf:Q8_0": {
+          "name": "Gemma E4B"
+        }
+      }
+    }
+  }
 }
