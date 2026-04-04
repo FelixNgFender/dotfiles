@@ -16,5 +16,6 @@ vim.keymap.set(
 	"n",
 	"<Leader>zp",
 	":!pandoc '%:p' -o '%:p:r.html' --citeproc --bibliography=\"$ZOTERO_BIB\"<CR>",
-	{ silent = true, desc = "Pandoc: compile to html" }
+	{ desc = "Pandoc: compile to html" }
 )
+vim.keymap.set("n", "<Leader>aA", ":Minuet blink toggle<CR>", { desc = "Minuet: toggle autocomplete" })
