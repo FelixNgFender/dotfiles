@@ -14,7 +14,6 @@ sudo stow -t / keyd
 stow leetcode
 stow mise
 stow nvim
-stow rclone
 stow opencode
 stow starship
 gshortcuts import gnome-shortcuts.yaml
