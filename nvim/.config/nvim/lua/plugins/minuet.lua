@@ -27,7 +27,7 @@ return {
 						-- post-launch.
 						model = "huggingface.co/unsloth/Qwen2.5-Coder-3B-Instruct-128K-GGUF:Q4_K_M",
 						optional = {
-							max_tokens = 224,
+							max_tokens = 128,
 							top_p = 0.9,
 						},
 						-- Llama.cpp does not support the `suffix` option in FIM completion.
