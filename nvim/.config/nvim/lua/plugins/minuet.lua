@@ -25,9 +25,9 @@ return {
 						end_point = "http://localhost:12434/engines/v1/completions",
 						-- The model is set by the llama-cpp server and cannot be altered
 						-- post-launch.
-						model = "huggingface.co/ggml-org/Qwen2.5-Coder-1.5B-Q8_0-GGUF",
+						model = "huggingface.co/unsloth/Qwen2.5-Coder-3B-Instruct-128K-GGUF:Q4_K_M",
 						optional = {
-							max_tokens = 56,
+							max_tokens = 224,
 							top_p = 0.9,
 						},
 						-- Llama.cpp does not support the `suffix` option in FIM completion.
