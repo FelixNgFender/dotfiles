@@ -11,7 +11,7 @@ alias lct="leetcode test"
 alias lcx="leetcode exec"
 
 # python
-alias sv="source .venv/bin/activate"
+alias av="source .venv/bin/activate"
 
 # docker
 alias dc="docker compose"

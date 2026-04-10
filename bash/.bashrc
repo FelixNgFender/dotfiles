@@ -38,6 +38,33 @@ ytaudio() {
   yt-dlp -x --audio-format best "$@"
 }
 
+yt2demucs() {
+  local url="$1"
+  local stem="${2:-all}" # all | vocals | drums | bass | other
+  local fmt="${3:-wav}"  # wav (recommended), flac, mp3
+  if [[ -z "$url" ]]; then
+    echo "Usage: yt2demucs <youtube_url> [stem] [format]"
+    echo "Example: yt2demucs \"https://youtu.be/...\" vocals wav"
+    return 1
+  fi
+  # download + extract audio
+  yt-dlp -x --audio-format "$fmt" -o "%(title)s.%(ext)s" "$url" || return 1
+  # resolve final downloaded filename
+  local file
+  file="$(yt-dlp --get-filename -o "%(title)s.%(ext)s" "$url")"
+  file="${file%.*}.$fmt"
+  if [[ ! -f "$file" ]]; then
+    echo "Could not find downloaded file: $file"
+    return 1
+  fi
+  # run demucs
+  if [[ "$stem" == "all" ]]; then
+    demucs --name htdemucs_6s "$file"
+  else
+    demucs --two-stems="$stem" "$file"
+  fi
+}
+
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
