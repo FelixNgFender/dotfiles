@@ -1,6 +1,3 @@
-# reaper
-alias reaper-jack="PIPEWIRE_LATENCY=\"128/48000\" pw-jack reaper"
-
 # pnpm
 alias pn="pnpm"
 
