@@ -92,3 +92,6 @@ eval "$(leetcode completions)"
 # for use in nvim-zotcite
 export ZOTERO_PATH=$ZOTERO_PATH
 export ZOTERO_BIB=$ZOTERO_BIB
+
+# huggingface
+export HF_TOKEN=$HF_TOKEN
