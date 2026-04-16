@@ -95,3 +95,4 @@ export ZOTERO_BIB=$ZOTERO_BIB
 
 # huggingface
 export HF_TOKEN=$HF_TOKEN
+export HF_TOKEN_VASTAI=$HF_TOKEN_VASTAI
