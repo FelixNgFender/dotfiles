@@ -16,6 +16,7 @@ stow mise
 stow nvim
 stow opencode
 stow starship
+stow tmux
 gshortcuts import gnome-shortcuts.yaml
 
 sudo keyd reload

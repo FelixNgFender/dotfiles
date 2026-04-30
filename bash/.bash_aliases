@@ -17,3 +17,6 @@ alias dcd="docker compose down"
 
 # brew
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+
+# copying
+alias copy='xclip -selection clipboard'
