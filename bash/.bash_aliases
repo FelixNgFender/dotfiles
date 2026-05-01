@@ -20,3 +20,6 @@ alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
 # copying
 alias copy='xclip -selection clipboard'
+
+# opencode
+alias oca="opencode attach http://localhost:4096 --dir ."

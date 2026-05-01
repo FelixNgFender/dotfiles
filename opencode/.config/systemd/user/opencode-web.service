@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenCode Web Server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h
+ExecStart=/home/linuxbrew/.linuxbrew/bin/opencode web
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
