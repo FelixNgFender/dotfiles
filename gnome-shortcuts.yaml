@@ -120,7 +120,7 @@ custom:
     - id: custom-keybindings/custom7
       name: Music
       binding: <Shift><Control><Alt><Super>m
-      command: sh -c -- "wmctrl -a "Feishin" || gtk-launch org.jeffvli.feishin"
+      command: sh -c -- "wmctrl -a \"Youtube Music\"  || gtk-launch Youtube-Music.desktop"
     - id: custom-keybindings/custom6
       name: Signal
       binding: <Shift><Control><Alt><Super>c

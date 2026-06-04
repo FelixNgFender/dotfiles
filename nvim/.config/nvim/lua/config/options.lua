@@ -13,4 +13,4 @@ vim.opt.wrap = true
 vim.lsp.enable("ty")
 
 -- for minuet-ai.nvim
-vim.g.lazyvim_blink_main = true
+-- vim.g.lazyvim_blink_main = true
