@@ -51,13 +51,6 @@ window-padding-x = 10
 background-opacity = 0.98
 shell-integration-features = ssh-terminfo,ssh-env
 
-# navigation: mimics zellij
-# tabs
-keybind = ctrl+t>n=new_tab
-keybind = ctrl+t>x=close_tab
-keybind = ctrl+t>h=previous_tab
-keybind = ctrl+t>l=next_tab
-
 # split
 keybind = ctrl+p>n=new_split:auto
 keybind = ctrl+p>x=close_surface
