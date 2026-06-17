@@ -4,8 +4,8 @@ pnpm = "latest"
 python = "latest"
 usage = "latest"
 uv = "latest"
+ty = "latest"
 rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src" }
-go = "latest"
 pandoc = "latest"
 
 [settings]

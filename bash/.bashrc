@@ -1,27 +1,57 @@
 source ~/.env
-source ~/.local/share/omakub/defaults/bash/rc
-
 # Editor used by CLI
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
+## SHELL
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# don't put duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=32768
+HISTFILESIZE="${HISTSIZE}"
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Autocompletion
+source /usr/share/bash-completion/bash_completion
+
+# Set complete path
+export PATH="$PATH:./bin:$HOME/.local/bin"
+set +h
+
+## INIT
+# homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+
+# mise
+if command -v mise &>/dev/null; then
+  eval "$(mise activate bash)"
+fi
+
 # cargo
 . "$HOME/.cargo/env"
 
-# yabridge
-export PATH="$PATH:$HOME/.local/share/yabridge"
+## PROMPT
+# Technicolor dreams
+force_color_prompt=yes
+color_prompt=yes
 
+# Simple prompt with path in the window/pane title and caret for typing line
+PS1=$'\uf0a9 '
+PS1="\[\e]0;\w\a\]$PS1"
+
+## RC
+
+# Aliases
 if [ -f ~/.bash_aliases ]; then
-  source ~/.bash_aliases
+  . ~/.bash_aliases
 fi
-
-# homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# cuda toolkit
-export CUDA_HOME="/usr/local/cuda"
-export PATH="$PATH:$CUDA_HOME/bin"
-export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 
 # yazi
 function y() {
@@ -31,38 +61,6 @@ function y() {
     builtin cd -- "$cwd" || exit
   fi
   rm -f -- "$tmp"
-}
-
-# yt-dlp
-ytaudio() {
-  yt-dlp -x --audio-format best "$@"
-}
-
-yt2demucs() {
-  local url="$1"
-  local stem="${2:-all}" # all | vocals | drums | bass | other
-  local fmt="${3:-wav}"  # wav (recommended), flac, mp3
-  if [[ -z "$url" ]]; then
-    echo "Usage: yt2demucs <youtube_url> [stem] [format]"
-    echo "Example: yt2demucs \"https://youtu.be/...\" vocals wav"
-    return 1
-  fi
-  # download + extract audio
-  yt-dlp -x --audio-format "$fmt" -o "%(title)s.%(ext)s" "$url" || return 1
-  # resolve final downloaded filename
-  local file
-  file="$(yt-dlp --get-filename -o "%(title)s.%(ext)s" "$url")"
-  file="${file%.*}.$fmt"
-  if [[ ! -f "$file" ]]; then
-    echo "Could not find downloaded file: $file"
-    return 1
-  fi
-  # run demucs
-  if [[ "$stem" == "all" ]]; then
-    demucs --name htdemucs_6s "$file"
-  else
-    demucs --two-stems="$stem" "$file"
-  fi
 }
 
 # pnpm
@@ -84,15 +82,11 @@ eval "$(fzf --bash)"
 # starship
 eval "$(starship init bash)"
 
-# leetcode-cli
-export LEETCODE_CSRF=$LEETCODE_CSRF
-export LEETCODE_SESSION=$LEETCODE_SESSION
-eval "$(leetcode completions)"
+# zoxide (initialized last so its hook plays nicely with other PROMPT_COMMAND users like starship)
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init bash)"
+fi
 
 # for use in nvim-zotcite
 export ZOTERO_PATH=$ZOTERO_PATH
 export ZOTERO_BIB=$ZOTERO_BIB
-
-# huggingface
-export HF_TOKEN=$HF_TOKEN
-export HF_TOKEN_VASTAI=$HF_TOKEN_VASTAI
