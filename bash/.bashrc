@@ -1,4 +1,3 @@
-source ~/.env
 # Editor used by CLI
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
@@ -86,7 +85,3 @@ eval "$(starship init bash)"
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init bash)"
 fi
-
-# for use in nvim-zotcite
-export ZOTERO_PATH=$ZOTERO_PATH
-export ZOTERO_BIB=$ZOTERO_BIB

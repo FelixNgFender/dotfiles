@@ -1,8 +1,6 @@
 tap "anomalyco/tap", trusted: true
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Backend processor for BibLaTeX
-brew "biber"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Binary installation for rust projects
@@ -19,6 +17,8 @@ brew "fzf"
 brew "gcc"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Lazier way to manage everything docker
+brew "lazydocker"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Fast, async, resource-friendly link checker
@@ -31,6 +31,8 @@ brew "neovim"
 brew "opencode"
 # Rsync for cloud storage
 brew "rclone"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
 # Autoformat shell script source code
 brew "shfmt"
 # Cross-shell prompt for astronauts
@@ -41,8 +43,6 @@ brew "stow"
 brew "tmux"
 # Program that allows you to count code, quickly
 brew "tokei"
-# Markup-based typesetting system
-brew "typst"
 # Command-line client for WebSockets
 brew "websocat"
 # Access X11 clipboards from the command-line
