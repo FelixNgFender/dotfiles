@@ -1,6 +1,8 @@
 tap "anomalyco/tap", trusted: true
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Binary installation for rust projects
@@ -15,6 +17,8 @@ brew "fd"
 brew "fzf"
 # GNU compiler collection
 brew "gcc"
+# GitHub command-line tool
+brew "gh"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Lazier way to manage everything docker
@@ -45,6 +49,8 @@ brew "tmux"
 brew "tokei"
 # Command-line client for WebSockets
 brew "websocat"
+# Command-line copy/paste utilities for Wayland
+brew "wl-clipboard"
 # Access X11 clipboards from the command-line
 brew "xclip"
 # Blazing fast terminal file manager written in Rust, based on async I/O
