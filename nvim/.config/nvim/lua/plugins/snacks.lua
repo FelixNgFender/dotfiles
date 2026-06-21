@@ -3,6 +3,7 @@ return {
 	opts = {
 		indent = { animate = { enabled = false } },
 		image = {},
+		terminal = { win = { position = "float" } },
 		-- scroll = { enabled = false },
 		explorer = {},
 		picker = {
