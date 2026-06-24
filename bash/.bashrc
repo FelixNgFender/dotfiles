@@ -85,3 +85,9 @@ eval "$(starship init bash)"
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init bash)"
 fi
+
+# Auto-start tmux on interactive SSH connections
+if [[ -n "$PS1" ]] && [[ -n "$SSH_CONNECTION" ]] && [[ -z "$TMUX" ]]; then
+  tmux attach-session -t "$HOSTNAME" || tmux new-session -s "$HOSTNAME"
+  exit
+fi

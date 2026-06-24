@@ -10,6 +10,7 @@ stow nvim
 stow opencode
 stow starship
 stow tmux
+stow systemd
 
 mise install
 systemctl --user restart opencode-web
