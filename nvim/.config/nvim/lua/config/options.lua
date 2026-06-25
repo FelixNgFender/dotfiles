@@ -11,3 +11,6 @@ vim.opt.wrap = true
 
 -- Required: Enable the language server
 vim.lsp.enable("ty")
+
+-- Headless Debian doesn't have display so have to tell nvim to use OSC 52
+vim.opt.clipboard = "unnamedplus"
