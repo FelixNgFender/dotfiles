@@ -53,10 +53,6 @@ brew "tmux"
 brew "tokei"
 # Command-line client for WebSockets
 brew "websocat"
-# Command-line copy/paste utilities for Wayland
-brew "wl-clipboard"
-# Access X11 clipboards from the command-line
-brew "xclip"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Shell extension to navigate your filesystem faster

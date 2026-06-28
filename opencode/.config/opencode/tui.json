@@ -1,4 +1,5 @@
 {
-  "plugin": ["oc-tps@latest"]
+  "plugin": [
+    "oc-tps@latest"
+  ]
 }
-
