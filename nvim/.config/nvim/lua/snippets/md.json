@@ -1,0 +1,9 @@
+{
+  "Disable Line Length": {
+    "prefix": "dll",
+    "body": [
+      "<!-- markdownlint-disable MD013 -->\n<!-- markdownlint-enable MD013 -->"
+    ],
+    "description": "Disable line length check"
+  }
+}
