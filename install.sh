@@ -17,4 +17,5 @@ stow systemd
 sudo stow -t / ssh
 
 mise install
-systemctl --user restart opencode-web
+systemctl --user enable --now opencode-web
+systemctl --user enable --now tmux
