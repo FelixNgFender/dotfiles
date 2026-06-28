@@ -1,15 +1,17 @@
 return {
 	"folke/snacks.nvim",
+	priority = 1000,
+	lazy = false,
+	---@type snacks.Config
 	opts = {
 		indent = { animate = { enabled = false } },
+		scroll = { enabled = false },
 		image = {},
 		terminal = { win = { position = "float" } },
-		-- scroll = { enabled = false },
-		explorer = {},
 		picker = {
 			sources = {
 				explorer = {
-					layout = { preset = "sidebar", preview = false, layout = { position = "right" } },
+					layout = { preset = "sidebar", layout = { position = "right" } },
 				},
 			},
 		},

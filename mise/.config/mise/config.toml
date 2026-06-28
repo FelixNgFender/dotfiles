@@ -1,12 +1,13 @@
 [tools]
 node = "latest"
+"npm:@mermaid-js/mermaid-cli" = "latest"
+pandoc = "latest"
 pnpm = "latest"
 python = "latest"
 usage = "latest"
 uv = "latest"
 ty = "latest"
 rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src" }
-pandoc = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

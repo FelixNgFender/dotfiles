@@ -19,6 +19,10 @@ brew "fzf"
 brew "gcc"
 # GitHub command-line tool
 brew "gh"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Lazier way to manage everything docker
@@ -41,6 +45,8 @@ brew "sevenzip"
 brew "shfmt"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Modernized, complete, self-contained TeX/LaTeX engine
+brew "tectonic"
 # Terminal multiplexer
 brew "tmux"
 # Program that allows you to count code, quickly
