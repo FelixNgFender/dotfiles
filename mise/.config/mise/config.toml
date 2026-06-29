@@ -1,12 +1,12 @@
 [tools]
-node = "latest"
+node = ["18.20.2", "latest"]
+python = ["3.12", "3.11", "3.10", "3.9", "3.8", "latest"]
 pnpm = "latest"
-python = "latest"
 usage = "latest"
 uv = "latest"
 rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src" }
-go = "latest"
 pandoc = "latest"
+ty = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

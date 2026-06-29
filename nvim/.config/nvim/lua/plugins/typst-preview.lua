@@ -39,7 +39,7 @@ return {
 				["tinymist"] = "tinymist",
 				["websocat"] = "websocat",
 			},
-			open_cmd = "firefox %s",
+			open_cmd = "open %s -a safari",
 		}, -- lazy.nvim will implicitly calls `setup {}`
 		keys = {
 			{ "<leader>cp", ft = "typst", "<cmd>TypstPreviewToggle<CR>", desc = "Toggle Typst Preview" },

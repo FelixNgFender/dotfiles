@@ -3,7 +3,7 @@
 # This template file has been automatically created at the following
 # path since Ghostty couldn't find any existing config files on your system:
 #
-#   /home/felixngfender/.config/ghostty/config
+#   /home/bear/.config/ghostty/config
 #
 # The template does not set any default options, since Ghostty ships
 # with sensible defaults for all options. Users should only need to set
@@ -43,27 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 
 # appearance
-# to grab this from wmctrl
-title = "Felix Ghostty"
-theme = "TokyoNight Night"
-gtk-titlebar = false
+theme = TokyoNight Night
 window-padding-x = 10
 background-opacity = 0.98
-shell-integration-features = ssh-terminfo,ssh-env
-
-# split
-keybind = ctrl+p>n=new_split:auto
-keybind = ctrl+p>x=close_surface
-keybind = ctrl+p>r=new_split:right
-keybind = ctrl+p>d=new_split:down
-keybind = ctrl+p>h=goto_split:left
-keybind = ctrl+p>j=goto_split:down
-keybind = ctrl+p>k=goto_split:up
-keybind = ctrl+p>l=goto_split:right
-keybind = ctrl+p>f=toggle_split_zoom
-# more convenient split navigation
-keybind = alt+h=goto_split:left
-keybind = alt+j=goto_split:down
-keybind = alt+k=goto_split:up
-keybind = alt+l=goto_split:right
-
+shell-integration-features = sudo,ssh-terminfo,ssh-env

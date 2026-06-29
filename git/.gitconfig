@@ -6,22 +6,11 @@
 [pull]
 	rebase = true
 [user]
-	email = ngthinh302@gmail.com
-	name = felixngfender
-[init]
-	defaultBranch = main
-[credential]
-	helper = store
-[lfs "customtransfer.xet"]
-	path = git-xet
-	args = transfer
-	concurrent = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[http]
-	lowSpeedLimit = 1000
-	lowSpeedTime = 60
-	postBuffer = 524288000
+	name = Felix Nguyen
+	email = thinhngn@amazon.com
+[core]
+	pager =
+[includeIf "gitdir:~/dotfiles/"]
+	path = .gitconfig-personal
+[includeIf "gitdir:~/personal/"]
+	path = .gitconfig-personal
