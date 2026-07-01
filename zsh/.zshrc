@@ -116,6 +116,9 @@ alias dcd='docker compose down'
 # brew
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
+# mwinit
+alias mwinit='/usr/bin/mwinit -o'
+
 # brazil
 source "$HOME/.brazil_completion/zsh_completion"
 alias bb='brazil-build'
