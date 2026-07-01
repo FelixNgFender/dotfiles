@@ -37,6 +37,8 @@ brew "gcc"
 brew "gh"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
+# Distributed revision control system
+brew "git"
 # Git extension for versioning large files
 brew "git-lfs"
 # Git LFS plugin that uploads and downloads using the Xet protocol
