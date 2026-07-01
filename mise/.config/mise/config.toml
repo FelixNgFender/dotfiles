@@ -11,4 +11,3 @@ ty = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
-github_attestations = false
