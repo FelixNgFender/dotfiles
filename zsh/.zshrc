@@ -79,6 +79,7 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+alias bat='cat'
 alias find='fd'
 alias du='dust'
 alias ps='procs'
