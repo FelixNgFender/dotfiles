@@ -7,20 +7,6 @@ repos:
         entry: ./update-brew.sh
         pass_filenames: false
         always_run: true
-      - id: update-shortcuts
-        name: update-shortcuts
-        language: system
-        entry: gshortcuts
-        args: ["export", "gnome-shortcuts.yaml"]
-        pass_filenames: false
-        always_run: true
-      - id: sync-dotenv
-        name: sync-dotenv
-        language: system
-        entry: sync-dotenv
-        args: ["--env", "bash/.env", "--sample", "bash/.env.example"]
-        pass_filenames: false
-        always_run: true
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
