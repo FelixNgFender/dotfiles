@@ -9,10 +9,16 @@ brew "caddy"
 brew "cargo-binstall"
 # Display information on the cargo cache, plus optional cache pruning
 brew "cargo-cache"
+# More intuitive version of du in rust
+brew "dust"
 # Modern, maintained replacement for ls
 brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
@@ -37,20 +43,24 @@ brew "mpv"
 brew "neovim"
 # AI coding agent, built for the terminal
 brew "opencode"
+# Modern replacement for ps written in Rust
+brew "procs"
 # Rsync for cloud storage
 brew "rclone"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
-# Autoformat shell script source code
-brew "shfmt"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Modernized, complete, self-contained TeX/LaTeX engine
 brew "tectonic"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Program that allows you to count code, quickly
 brew "tokei"
+# Parser generator tool
+brew "tree-sitter-cli"
 # Command-line client for WebSockets
 brew "websocat"
 # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -58,4 +68,3 @@ brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 cargo "bacon"
-cargo "typstyle"

@@ -5,10 +5,28 @@ alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
 alias fd='fdfind'
-# Only shadow cd with zoxide if it is actually installed
-if command -v zoxide &>/dev/null; then
-  alias cd=z
-fi
+alias cd="zd"
+zd() {
+  if [ $# -eq 0 ]; then
+    builtin cd ~ && return
+  elif [ -d "$1" ]; then
+    builtin cd "$1"
+  else
+    z "$@" && printf "\U000F17A9 " && pwd || echo "Error: Directory not found"
+  fi
+}
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd" || exit
+  fi
+  rm -f -- "$tmp"
+}
+alias find='fd'
+alias du='dust'
+alias ps='procs'
+alias top='btop'
 
 # Directories
 alias ..='cd ..'

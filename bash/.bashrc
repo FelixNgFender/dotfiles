@@ -29,12 +29,13 @@ set +h
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 # mise
-if command -v mise &>/dev/null; then
-  eval "$(mise activate bash)"
-fi
+eval "$(mise activate bash)"
 
 # cargo
 . "$HOME/.cargo/env"
+
+# expose mason lsps to cli
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 ## PROMPT
 # Technicolor dreams
@@ -51,16 +52,6 @@ PS1="\[\e]0;\w\a\]$PS1"
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
-
-# yazi
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd" || exit
-  fi
-  rm -f -- "$tmp"
-}
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
@@ -81,10 +72,8 @@ eval "$(fzf --bash)"
 # starship
 eval "$(starship init bash)"
 
-# zoxide (initialized last so its hook plays nicely with other PROMPT_COMMAND users like starship)
-if command -v zoxide &>/dev/null; then
-  eval "$(zoxide init bash)"
-fi
+# zoxide
+eval "$(zoxide init bash)"
 
 # Auto-start tmux on interactive SSH connections
 if [[ -n "$PS1" ]] && [[ -n "$SSH_CONNECTION" ]] && [[ -z "$TMUX" ]]; then
