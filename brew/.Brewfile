@@ -43,6 +43,8 @@ brew "git-lfs"
 brew "git-xet"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Client library for huggingface.co hub
+brew "hf"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor

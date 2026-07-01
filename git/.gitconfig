@@ -10,7 +10,5 @@
 	email = thinhngn@amazon.com
 [core]
 	pager =
-[includeIf "gitdir:~/dotfiles/"]
-	path = .gitconfig-personal
 [includeIf "gitdir:~/personal/"]
 	path = .gitconfig-personal
