@@ -13,10 +13,6 @@ return {
 		opts = {
 			servers = {
 				pyright = {
-					mason = false,
-					autostart = false,
-				},
-				ruff = {
 					keys = {
 						{
 							"<leader>co",
@@ -73,6 +69,11 @@ return {
 				"shfmt",
 				"sqlfluff",
 				"stylua",
+				"mypy",
+				"black",
+				"isort",
+				"flake8",
+				"sphinx-lint",
 			},
 		},
 	},
@@ -94,7 +95,6 @@ return {
 				"lua_ls",
 				"marksman",
 				"pyright",
-				"ruff",
 				"taplo",
 				"texlab",
 				"tinymist",
