@@ -44,6 +44,4 @@
 
 # appearance
 theme = TokyoNight Night
-window-padding-x = 10
-background-opacity = 0.98
 shell-integration-features = sudo,ssh-terminfo,ssh-env
