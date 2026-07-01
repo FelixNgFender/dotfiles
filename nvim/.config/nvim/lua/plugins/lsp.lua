@@ -1,5 +1,14 @@
 return {
 	{
+		"mason-org/mason.nvim",
+		opts = function(_, opts)
+			-- causes problems on AL2023 ARM64 so we rely on homebrew version
+			opts.ensure_installed = vim.tbl_filter(function(tool)
+				return tool ~= "tree-sitter-cli"
+			end, opts.ensure_installed or {})
+		end,
+	},
+	{
 		"neovim/nvim-lspconfig",
 		opts = {
 			servers = {

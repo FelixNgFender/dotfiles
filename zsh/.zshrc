@@ -56,10 +56,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# zotero
-export ZOTERO_PATH="$HOME/Zotero"
-export ZOTERO_BIB="$ZOTERO_PATH/library.bib"
-
 # ALIASES
 # file system
 alias ls='eza -lh --group-directories-first --icons=auto'
