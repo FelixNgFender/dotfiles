@@ -9,12 +9,6 @@ brew "biber"
 brew "btop"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# General-purpose data compression with high compression ratio
-brew "xz"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl"
 # Library for command-line editing
 brew "readline"
 # Command-line interface for SQLite
@@ -61,14 +55,8 @@ brew "llama.cpp"
 brew "lychee"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
-# Feature-rich command-line audio/video downloader
-brew "yt-dlp"
-# Media player based on MPlayer and mplayer2
-brew "mpv"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Paste PNG into files
-brew "pngpaste"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Modern replacement for ps written in Rust
@@ -87,8 +75,6 @@ brew "sevenzip"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Tool Command Language
-brew "tcl-tk"
 # Modernized, complete, self-contained TeX/LaTeX engine
 brew "tectonic"
 # Simplified and community-driven man pages
@@ -101,10 +87,6 @@ brew "tokei"
 brew "tree-sitter-cli"
 # Markup-based typesetting system
 brew "typst"
-# File synchronization tool
-brew "unison"
-# Executes a program periodically, showing output fullscreen
-brew "watch"
 # Command-line client for WebSockets
 brew "websocat"
 # Internet file retriever
@@ -116,18 +98,5 @@ brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 cask "font-jetbrains-mono-nerd-font"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
-# Customise mouse behavior
-cask "linearmouse"
-# Open-source cross-platform alternative to AirDrop
-cask "localsend"
-# Control your tools with a few keystrokes
-cask "raycast"
-vscode "anthropic.claude-code"
-vscode "marklel.vscode-brazil"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.remote-explorer"
 cargo "bacon"
 npm "corepack"

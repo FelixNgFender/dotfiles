@@ -1,10 +1,10 @@
 add_newline = true
 command_timeout = 200
-format = "[$hostname$directory$git_branch$git_status]($style)$character"
+format = "$hostname[$directory$git_branch$git_status]($style)$character"
 
-[character]
-error_symbol = "[✗](bold cyan)"
-success_symbol = "[❯](bold cyan)"
+[hostname]
+format = "$ssh_symbol[arm]($style) "
+style = 'yellow'
 
 [directory]
 truncation_length = 2
@@ -31,6 +31,6 @@ staged = ""
 renamed = ""
 deleted = ""
 
-[hostname]
-format = '[$ssh_symbol$hostname]($style) '
-style = 'bold red'
+[character]
+error_symbol = "[✗](bold cyan)"
+success_symbol = "[❯](bold cyan)"

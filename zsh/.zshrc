@@ -1,6 +1,12 @@
 autoload -Uz compinit
 compinit
 
+# devdesktop
+export BRAZIL_WORKSPACE_DEFAULT_LAYOUT=short
+export AUTO_TITLE_SCREENS="NO"
+# if you wish to use IMDS set AWS_EC2_METADATA_DISABLED=false
+export AWS_EC2_METADATA_DISABLED=true
+
 export PATH=$HOME/.toolbox/bin:$PATH
 
 # Added by AIM CLI
@@ -23,7 +29,7 @@ export VISUAL="$EDITOR"
 bindkey -e
 
 # homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 # starship
 eval "$(starship init zsh)"
@@ -127,3 +133,12 @@ alias bbr='brc brazil-build'
 alias bball='brc --allPackages'
 alias bbb='brc --allPackages brazil-build'
 alias bbra='bbr apollo-pkg'
+ 
+# finch
+alias finch='sudo HOME=/home/thinhngn DOCKER_CONFIG=/home/thinhngn/.docker finch'
+
+# Auto-start tmux on interactive SSH connections
+# if [[ -n "$PS1" ]] && [[ -n "$SSH_CONNECTION" ]] && [[ -z "$TMUX" ]]; then
+#   tmux attach-session -t "$HOSTNAME" || tmux new-session -s "$HOSTNAME"
+#   exit
+# fi

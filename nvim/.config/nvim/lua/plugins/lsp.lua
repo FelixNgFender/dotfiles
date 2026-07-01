@@ -77,7 +77,6 @@ return {
 			ensure_installed = {
 				"astro",
 				"bashls",
-				"clangd",
 				"docker_compose_language_service",
 				"dockerls",
 				"eslint",

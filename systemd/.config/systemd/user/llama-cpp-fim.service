@@ -1,0 +1,12 @@
+[Unit]
+Description=llama.cpp FIM server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/linuxbrew/.linuxbrew/bin/llama-server -hf sweepai/sweep-next-edit-1.5B -ngl 99 -fa on -c 8192 -b 2048 -ub 2048 --cache-type-k q8_0 --cache-type-v q8_0 --mlock --prio 2
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
