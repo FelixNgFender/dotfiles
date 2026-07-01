@@ -30,7 +30,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Set up mise for runtime management
 eval "$(mise activate zsh)"
-source /Users/thinhngn/.brazil_completion/zsh_completion
 
 # uv
 eval "$(uv generate-shell-completion zsh)"
@@ -97,6 +96,8 @@ alias lzg='lazygit'
 alias lzd='lazydocker'
 alias pn='pnpm'
 alias av='source .venv/bin/activate'
+compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
+alias decompress="tar -xzf"
 
 # git
 alias gcm='git commit -m'
@@ -114,6 +115,7 @@ alias dcd='docker compose down'
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
 # brazil
+source "$HOME/.brazil_completion/zsh_completion"
 alias bb='brazil-build'
 alias bba='brazil-build apollo-pkg'
 alias bre='brazil-runtime-exec'
@@ -125,4 +127,3 @@ alias bbr='brc brazil-build'
 alias bball='brc --allPackages'
 alias bbb='brc --allPackages brazil-build'
 alias bbra='bbr apollo-pkg'
-
