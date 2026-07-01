@@ -22,11 +22,11 @@ export VISUAL="$EDITOR"
 # set emacs mode for prompt, has to override $EDITOR
 bindkey -e
 
-# starship
-eval "$(starship init zsh)"
-
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# starship
+eval "$(starship init zsh)"
 
 # Set up mise for runtime management
 eval "$(mise activate zsh)"
