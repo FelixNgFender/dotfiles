@@ -6,6 +6,7 @@ export BRAZIL_WORKSPACE_DEFAULT_LAYOUT=short
 export AUTO_TITLE_SCREENS="NO"
 # if you wish to use IMDS set AWS_EC2_METADATA_DISABLED=false
 export AWS_EC2_METADATA_DISABLED=true
+export HOSTNAME_ALIAS=arm
 
 export PATH=$HOME/.toolbox/bin:$PATH
 
@@ -81,6 +82,7 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+alias cat='bat'
 alias find='fd'
 alias du='dust'
 alias ps='procs'
@@ -137,7 +139,7 @@ alias bbra='bbr apollo-pkg'
 alias finch='sudo HOME=/home/thinhngn DOCKER_CONFIG=/home/thinhngn/.docker finch'
 
 # Auto-start tmux on interactive SSH connections
-# if [[ -n "$PS1" ]] && [[ -n "$SSH_CONNECTION" ]] && [[ -z "$TMUX" ]]; then
-#   tmux attach-session -t "$HOSTNAME" || tmux new-session -s "$HOSTNAME"
-#   exit
-# fi
+if [[ -n "$PS1" ]] && [[ -n "$SSH_CONNECTION" ]] && [[ -z "$TMUX" ]]; then
+  tmux attach-session -t "$HOSTNAME_ALIAS" || tmux new-session -s "$HOSTNAME_ALIAS"
+  exit
+fi

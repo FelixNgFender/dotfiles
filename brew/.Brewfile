@@ -1,16 +1,18 @@
 tap "amazon/amazon", "ssh://git.amazon.com/pkg/HomebrewAmazon", trusted: true
+# GNU compiler collection
+brew "gcc"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Library for command-line editing
+brew "readline"
 # Backend processor for BibLaTeX
 brew "biber"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
-# Library for command-line editing
-brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
 # More intuitive version of du in rust
@@ -25,8 +27,6 @@ brew "fd"
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# GNU compiler collection
-brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
@@ -79,8 +79,6 @@ brew "stow"
 brew "tectonic"
 # Simplified and community-driven man pages
 brew "tldr"
-# Terminal multiplexer
-brew "tmux"
 # Program that allows you to count code, quickly
 brew "tokei"
 # Parser generator tool
