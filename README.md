@@ -2,8 +2,7 @@
 
 ## Quick start
 
-If on Ubuntu, install Omakub. Then install Ghostty, gshortcuts, and Homebrew,
-then do this:
+Install Homebrew and various Amazon stuff then do this:
 
 ```shell
 chmod u+x ./*.sh
@@ -12,25 +11,9 @@ chmod u+x ./*.sh
 
 ## Standalone apps
 
-### Music
-
-reaper, neural dsp, yabridge, bunch of other VSTs i think.
-
-### Video
-
-kdenlive
-
-### GPU programming
-
-cuda toolkit
-
-### Gaming
-
-sunshine, moonlight
-
 ### Misc
 
-tailscale, fcitx5 (for keyboards), wmctrl, keyd, globalprotect
+tailscale
 
 ## How stow works
 

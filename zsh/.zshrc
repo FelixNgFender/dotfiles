@@ -1,15 +1,26 @@
-# Kiro CLI pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+autoload -Uz compinit
+compinit
 
-export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.toolbox/bin:$PATH
 
 # Added by AIM CLI
 export PATH="$HOME/.aim/mcp-servers:$PATH"
 
+export PATH=/usr/local/bin:$PATH
+
+# uv
+export PATH="$HOME/.local/bin:$PATH"
+ 
+# expose mason lsps to cli
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
 # Editor used by CLI
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
+export VISUAL="$EDITOR"
+
+# set emacs mode for prompt, has to override $EDITOR
+bindkey -e
 
 # starship
 eval "$(starship init zsh)"
@@ -44,9 +55,6 @@ esac
 export ZOTERO_PATH="$HOME/Zotero"
 export ZOTERO_BIB="$ZOTERO_PATH/library.bib"
 
-# kiro
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
-
 # ALIASES
 # file system
 alias ls='eza -lh --group-directories-first --icons=auto'
@@ -72,6 +80,10 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+alias find='fd'
+alias du='dust'
+alias ps='procs'
+alias top='btop'
 
 # directories
 alias ..='cd ..'
@@ -101,5 +113,16 @@ alias dcd='docker compose down'
 # brew
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
-# Kiro CLI post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+# brazil
+alias bb='brazil-build'
+alias bba='brazil-build apollo-pkg'
+alias bre='brazil-runtime-exec'
+alias bws='brazil ws'
+alias bwsuse='bws use -p'
+alias bwscreate='bws create -n'
+alias brc='brazil-recursive-cmd'
+alias bbr='brc brazil-build'
+alias bball='brc --allPackages'
+alias bbb='brc --allPackages brazil-build'
+alias bbra='bbr apollo-pkg'
+

@@ -10,7 +10,7 @@ stow git
 stow karabiner
 stow mise
 stow nvim
-stow opencode
 stow starship
 stow tmux
 stow zsh
+stow launchd

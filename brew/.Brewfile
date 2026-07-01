@@ -19,6 +19,8 @@ brew "curl"
 brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
+# More intuitive version of du in rust
+brew "dust"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
@@ -61,26 +63,22 @@ brew "yt-dlp"
 brew "mpv"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# AI coding agent, built for the terminal
-brew "opencode"
 # Paste PNG into files
 brew "pngpaste"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Modern replacement for ps written in Rust
+brew "procs"
 # Rsync for cloud storage
 brew "rclone"
 # SVG rendering tool and library
 brew "resvg"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Utility that provides fast incremental file transfer
 brew "rsync"
-# Experimental Rust compiler front-end for IDEs
-brew "rust-analyzer"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
-# Autoformat shell script source code
-brew "shfmt"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -89,6 +87,8 @@ brew "stow"
 brew "tcl-tk"
 # Modernized, complete, self-contained TeX/LaTeX engine
 brew "tectonic"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Program that allows you to count code, quickly
@@ -97,8 +97,6 @@ brew "tokei"
 brew "tree-sitter-cli"
 # Markup-based typesetting system
 brew "typst"
-# Beautiful and reliable typst code formatter
-brew "typstyle"
 # File synchronization tool
 brew "unison"
 # Executes a program periodically, showing output fullscreen
@@ -116,10 +114,13 @@ brew "zoxide"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Customise mouse behavior
+cask "linearmouse"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
 # Control your tools with a few keystrokes
 cask "raycast"
+vscode "anthropic.claude-code"
 vscode "marklel.vscode-brazil"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
