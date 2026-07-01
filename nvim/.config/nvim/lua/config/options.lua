@@ -14,4 +14,3 @@ vim.lsp.enable("ty")
 
 -- Headless doesn't have display so have to tell nvim to use OSC 52
 vim.opt.clipboard = "unnamedplus"
-vim.g.clipboard = "osc52"
