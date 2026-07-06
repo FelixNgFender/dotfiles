@@ -9,6 +9,8 @@ brew "biber"
 brew "btop"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # General-purpose data compression with high compression ratio
@@ -81,6 +83,8 @@ brew "resvg"
 brew "ripgrep"
 # Utility that provides fast incremental file transfer
 brew "rsync"
+# Display and control your Android device
+brew "scrcpy"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
 # Cross-shell prompt for astronauts
@@ -115,6 +119,8 @@ brew "yazi"
 brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Android SDK component
+cask "android-platform-tools"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
