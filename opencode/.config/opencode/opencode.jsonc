@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "enabled_providers": ["amazon-bedrock"],
+  "share": "disabled",
+  "provider": {
+    "amazon-bedrock": {
+      "options": {
+        "profile": "default",
+        "region": "us-west-2",
+      },
+    },
+  },
+  "mcp": {
+    "builder-mcp": {
+      "type": "local",
+      "command": ["builder-mcp"],
+    },
+  },
+  "skills": {
+    "paths": ["~/.aim/skills"],
+  },
+}

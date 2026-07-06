@@ -9,6 +9,7 @@ stow -t ~ karabiner
 stow -t ~ launchd
 stow -t ~ mise
 stow -t ~ nvim
+stow -t ~ opencode
 stow -t ~ starship
 stow -t ~ tmux
 stow -t ~ zsh
