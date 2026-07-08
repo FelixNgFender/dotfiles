@@ -41,7 +41,6 @@ eval "$(mise activate zsh)"
 # uv
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
-eval "$(ty generate-shell-completion zsh)"
 
 # fzf
 source <(fzf --zsh)

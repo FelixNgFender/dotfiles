@@ -9,8 +9,5 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 vim.opt.wrap = true
 
--- Required: Enable the language server
-vim.lsp.enable("ty")
-
 -- Headless doesn't have display so have to tell nvim to use OSC 52
 vim.opt.clipboard = "unnamedplus"
