@@ -125,6 +125,7 @@ source "$HOME/.brazil_completion/zsh_completion"
 alias bb='brazil-build'
 alias bba='brazil-build apollo-pkg'
 alias bre='brazil-runtime-exec'
+alias bte='brazil-test-exec'
 alias bws='brazil ws'
 alias bwsuse='bws use -p'
 alias bwscreate='bws create -n'
