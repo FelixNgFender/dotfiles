@@ -44,4 +44,4 @@
 
 # appearance
 theme = TokyoNight Night
-shell-integration-features = sudo,ssh-terminfo,ssh-env
+shell-integration-features = ssh-terminfo,ssh-env
