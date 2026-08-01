@@ -99,6 +99,16 @@ alias pn='pnpm'
 alias av='source .venv/bin/activate'
 compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
 alias decompress="tar -xzf"
+loadenv() {
+  local file="${1:-.env}"
+
+  if [[ -f "$file" ]]; then
+    export $(grep -v '^#' "$file" | xargs)
+  else
+    echo "$file file not found"
+    return 1
+  fi
+}
 
 # git
 alias gcm='git commit -m'
