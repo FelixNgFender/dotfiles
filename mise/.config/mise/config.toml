@@ -4,7 +4,7 @@ python = ["3.12", "3.11", "3.10", "3.9", "3.8"]
 "npm:@mermaid-js/mermaid-cli" = "latest"
 usage = "latest"
 uv = "latest"
-rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src" }
+rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src,rustfmt,clippy,llvm-tools-preview" }
 pandoc = "latest"
 
 [settings]
