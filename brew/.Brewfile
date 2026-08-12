@@ -3,18 +3,22 @@ tap "amazon/amazon", "ssh://git.amazon.com/pkg/HomebrewAmazon", trusted: true
 brew "gcc"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Clone of cat(1) with syntax highlighting and Git integration
-brew "bat"
 # Library for command-line editing
 brew "readline"
+# Command-line interface for SQLite
+brew "sqlite"
+# Curl like simplicity to access AWS resources
+brew "awscurl"
+# Background rust code check
+brew "bacon"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Backend processor for BibLaTeX
 brew "biber"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
-# Command-line interface for SQLite
-brew "sqlite"
 # More intuitive version of du in rust
 brew "dust"
 # Modern, maintained replacement for ls
@@ -96,5 +100,4 @@ brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 cask "font-jetbrains-mono-nerd-font"
-cargo "bacon"
 npm "corepack"
