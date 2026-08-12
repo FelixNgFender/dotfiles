@@ -56,6 +56,18 @@ return {
 		},
 	},
 	{
+		"mrcjkb/rustaceanvim",
+		opts = {
+			server = {
+				default_settings = {
+					["rust-analyzer"] = {
+						checkOnSave = false,
+					},
+				},
+			},
+		},
+	},
+	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		dependencies = { "mason-org/mason.nvim" },
 		opts = {
