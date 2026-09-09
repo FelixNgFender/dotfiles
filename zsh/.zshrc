@@ -138,6 +138,42 @@ alias bbra='bbr apollo-pkg'
 # finch
 alias finch='sudo HOME=/home/thinhngn DOCKER_CONFIG=/home/thinhngn/.docker finch'
 
+# serve the current directory and expose it in a new tmux window.
+tunnel_serve() {
+  if (( $# < 2 )); then
+    echo "Usage: tunnel_serve <name> <allow-list> [port=6767] [tunnel options...]" >&2
+    return 2
+  fi
+
+  if [[ -z "$TMUX" ]]; then
+    echo "tunnel_serve must be run inside tmux" >&2
+    return 1
+  fi
+
+  local name="$1"
+  local allow="$2"
+  local port=6767
+  shift 2
+
+  if (( $# > 0 )) && [[ "$1" != -* ]]; then
+    port="$1"
+    shift
+  fi
+
+  if [[ "$port" != <1-65535> ]]; then
+    echo "Invalid port: $port" >&2
+    return 2
+  fi
+
+  local pane_id
+  pane_id="$(tmux new-window -P -F '#{pane_id}' -n "$name" -c "$PWD" \
+    python3 -m http.server "$port" --bind 127.0.0.1)" || return
+
+  tmux split-window -h -t "$pane_id" -c "$PWD" \
+    tunnel create "$port" --name "$name" --allow "$allow" "$@"
+}
+
+
 # Auto-start tmux on interactive SSH connections
 if [[ -n "$PS1" ]] && [[ -n "$SSH_CONNECTION" ]] && [[ -z "$TMUX" ]]; then
   tmux attach-session -t "$HOSTNAME_ALIAS" || tmux new-session -s "$HOSTNAME_ALIAS"
