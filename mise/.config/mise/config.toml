@@ -1,13 +1,14 @@
 [tools]
 node = "24"
-python = ["3.12", "3.11", "3.10", "3.9", "3.8"]
 pnpm = "latest"
 "npm:@mermaid-js/mermaid-cli" = "latest"
+vp = "latest"
 usage = "latest"
+python = ["3.12", "3.11", "3.10", "3.9", "3.8"]
 uv = "latest"
+ty = "latest"
 rust = { version = "latest", profile = "default", components = "rust-analyzer,rust-src" }
 pandoc = "latest"
-ty = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

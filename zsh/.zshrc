@@ -24,6 +24,9 @@ bindkey -e
 
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
 
 # starship
 eval "$(starship init zsh)"
@@ -138,3 +141,62 @@ alias bbr='brc brazil-build'
 alias bball='brc --allPackages'
 alias bbb='brc --allPackages brazil-build'
 alias bbra='bbr apollo-pkg'
+alias codex='codex --aws-profile astra'
+
+# ssh
+pfwd() {
+  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    echo "Usage: pfwd <ssh-host> <remote-port> [local-port] [remote-host]"
+    echo "Forwards remote-host:remote-port through ssh-host to localhost:local-port."
+    echo "Defaults: local-port=remote-port, remote-host=localhost."
+    echo "Example:  pfwd arm 3000"
+    echo "Press Ctrl-C to stop forwarding."
+    return
+  fi
+
+  if [[ -z "$1" || -z "$2" ]]; then
+    echo "Usage: pfwd <ssh-host> <remote-port> [local-port] [remote-host]" >&2
+    echo "Run 'pfwd --help' for details." >&2
+    return 1
+  fi
+
+  local ssh_host="$1"
+  local remote_port="$2"
+  local local_port="${3:-$remote_port}"
+  local remote_host="${4:-localhost}"
+
+  ssh -N -L "${local_port}:${remote_host}:${remote_port}" "$ssh_host"
+}
+
+# yt-dlp
+ytaudio() {
+  yt-dlp -x --audio-format best "$@"
+}
+
+yt2demucs() {
+  local url="$1"
+  local stem="${2:-all}" # all | vocals | drums | bass | other
+  local fmt="${3:-wav}"  # wav (recommended), flac, mp3
+  if [[ -z "$url" ]]; then
+    echo "Usage: yt2demucs <youtube_url> [stem] [format]"
+    echo "Example: yt2demucs \"https://youtu.be/...\" vocals wav"
+    return 1
+  fi
+  # download + extract audio
+  yt-dlp -x --audio-format "$fmt" -o "%(title)s.%(ext)s" "$url" || return 1
+  # resolve final downloaded filename
+  local file
+  file="$(yt-dlp --get-filename -o "%(title)s.%(ext)s" "$url")"
+  file="${file%.*}.$fmt"
+  if [[ ! -f "$file" ]]; then
+    echo "Could not find downloaded file: $file"
+    return 1
+  fi
+  # run demucs
+  if [[ "$stem" == "all" ]]; then
+    uvx --with torchcodec,numpy demucs --name htdemucs_6s "$file"
+  else
+    uvx --with torchcodec,numpy demucs --two-stems="$stem" "$file"
+  fi
+}
+
