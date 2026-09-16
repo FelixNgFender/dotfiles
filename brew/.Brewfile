@@ -59,8 +59,12 @@ brew "llama.cpp"
 brew "lychee"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Libraries for security-enabled client and server applications
+brew "nss"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Modern replacement for ps written in Rust
@@ -100,4 +104,5 @@ brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 cask "font-jetbrains-mono-nerd-font"
+cargo "cargo-cache"
 npm "corepack"

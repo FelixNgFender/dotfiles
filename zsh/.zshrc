@@ -31,6 +31,9 @@ bindkey -e
 
 # homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
 
 # starship
 eval "$(starship init zsh)"
@@ -134,6 +137,7 @@ alias bbr='brc brazil-build'
 alias bball='brc --allPackages'
 alias bbb='brc --allPackages brazil-build'
 alias bbra='bbr apollo-pkg'
+alias codex='codex --aws-profile astra'
  
 # finch
 alias finch='sudo HOME=/home/thinhngn DOCKER_CONFIG=/home/thinhngn/.docker finch'
