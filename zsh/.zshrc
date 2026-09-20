@@ -27,6 +27,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
+# Fish-style inline command suggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # starship
 eval "$(starship init zsh)"

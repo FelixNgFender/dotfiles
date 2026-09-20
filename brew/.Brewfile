@@ -17,6 +17,8 @@ brew "coreutils"
 brew "xz"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# TIFF library and utilities
+brew "libtiff"
 # Library for command-line editing
 brew "readline"
 # Command-line interface for SQLite
@@ -47,6 +49,8 @@ brew "git-lfs"
 brew "git-xet"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Agent multiplexer that lives in your terminal
+brew "herdr", restart_service: :changed
 # Client library for huggingface.co hub
 brew "hf"
 # Tools and libraries to manipulate images in select formats
@@ -63,24 +67,32 @@ brew "llama.cpp"
 brew "lychee"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
 # Media player based on MPlayer and mplayer2
 brew "mpv"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Libraries for security-enabled client and server applications
+brew "nss"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
 # Paste PNG into files
 brew "pngpaste"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Modern replacement for ps written in Rust
 brew "procs"
+# Develop and deploy code with zero configuration
+brew "railway"
 # Rsync for cloud storage
 brew "rclone"
 # SVG rendering tool and library
 brew "resvg"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 # Utility that provides fast incremental file transfer
 brew "rsync"
 # Display and control your Android device
@@ -119,6 +131,8 @@ brew "yazi"
 brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
 # Android SDK component
 cask "android-platform-tools"
 cask "font-jetbrains-mono-nerd-font"
@@ -131,9 +145,28 @@ cask "localsend"
 # Control your tools with a few keystrokes
 cask "raycast"
 vscode "anthropic.claude-code"
+vscode "davidanson.vscode-markdownlint"
 vscode "marklel.vscode-brazil"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.remote-explorer"
+vscode "oxc.oxc-vscode"
+vscode "tomoki1207.pdf"
+vscode "vitest.explorer"
+vscode "voidzero.vite-plus-extension-pack"
+vscode "vscodevim.vim"
+vscode "yzane.markdown-pdf"
 cargo "bacon"
+uv "demucs[torchcodec]"
+uv "hf"
 npm "corepack"
+npm "puppeteer-core"
