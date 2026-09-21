@@ -31,6 +31,8 @@ brew "fd"
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# TIFF library and utilities
+brew "libtiff"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
@@ -103,6 +105,8 @@ brew "yazi"
 brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
 cask "font-jetbrains-mono-nerd-font"
 cargo "cargo-cache"
 npm "corepack"
