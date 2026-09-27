@@ -1,6 +1,8 @@
 tap "anomalyco/tap", trusted: true
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Backend processor for BibLaTeX
+brew "biber"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
@@ -9,6 +11,8 @@ brew "caddy"
 brew "cargo-binstall"
 # Display information on the cargo cache, plus optional cache pruning
 brew "cargo-cache"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # More intuitive version of du in rust
 brew "dust"
 # Modern, maintained replacement for ls
@@ -61,12 +65,19 @@ brew "tmux"
 brew "tokei"
 # Parser generator tool
 brew "tree-sitter-cli"
+# Markup-based typesetting system
+brew "typst"
 # Command-line client for WebSockets
 brew "websocat"
+# Command-line copy/paste utilities for Wayland
+brew "wl-clipboard"
+# Access X11 clipboards from the command-line
+brew "xclip"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # OpenCode V2 - the AI coding agent for the terminal
 brew "anomalyco/tap/opencode-v2", trusted: true
+cask "font-jetbrains-mono-nerd-font"
 cargo "bacon"

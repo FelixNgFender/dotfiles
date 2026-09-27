@@ -2,16 +2,12 @@
 
 ## Quick start
 
-If on Debian, install mise, Homebrew, then do this:
+If on Debian, install mise, Homebrew, keyd, then do this:
 
 ```shell
 chmod u+x ./*.sh
 ./install.sh
 ```
-
-## Standalone apps
-
-tailscale
 
 ## How stow works
 

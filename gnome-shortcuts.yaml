@@ -1,0 +1,132 @@
+builtin:
+  org.gnome.desktop.wm.keybindings:
+    - key: begin-resize
+      bindings:
+        - <Super>BackSpace
+    - key: move-to-workspace-10
+      bindings:
+        - <Super><Shift>0
+    - key: move-to-workspace-6
+      bindings:
+        - <Super><Shift>6
+    - key: move-to-workspace-7
+      bindings:
+        - <Super><Shift>7
+    - key: switch-input-source
+      bindings: []
+    - key: move-to-workspace-8
+      bindings:
+        - <Super><Shift>8
+    - key: move-to-workspace-9
+      bindings:
+        - <Super><Shift>9
+    - key: close
+      bindings:
+        - <Super>w
+    - key: switch-to-workspace-1
+      bindings:
+        - <Super>1
+    - key: switch-to-workspace-2
+      bindings:
+        - <Super>2
+    - key: move-to-workspace-1
+      bindings:
+        - <Super><Shift>1
+    - key: switch-to-workspace-3
+      bindings:
+        - <Super>3
+    - key: move-to-workspace-2
+      bindings:
+        - <Super><Shift>2
+    - key: switch-to-workspace-left
+      bindings:
+        - <Super>Page_Up
+        - <Super><Alt>Left
+    - key: switch-to-workspace-right
+      bindings:
+        - <Super>Page_Down
+        - <Super><Alt>Right
+    - key: switch-to-workspace-4
+      bindings:
+        - <Super>4
+    - key: move-to-workspace-3
+      bindings:
+        - <Super><Shift>3
+    - key: switch-input-source-backward
+      bindings: []
+    - key: switch-to-workspace-5
+      bindings:
+        - <Super>5
+    - key: move-to-workspace-4
+      bindings:
+        - <Super><Shift>4
+    - key: toggle-fullscreen
+      bindings:
+        - <Shift>F11
+    - key: switch-to-workspace-6
+      bindings:
+        - <Super>6
+    - key: move-to-workspace-5
+      bindings:
+        - <Super><Shift>5
+custom:
+  - id: custom-keybindings/custom0
+    name: Vicinae
+    binding: <Super>space
+    command: vicinae toggle
+  - id: custom-keybindings/custom1
+    name: Flameshot
+    binding: <Control>Print
+    command: sh -c -- "flameshot gui"
+  - id: custom-keybindings/custom7
+    name: Music
+    binding: <Shift><Control><Alt><Super>m
+    command: vicinae deeplink vicinae://launch/applications/sidra
+  - id: custom-keybindings/custom6
+    name: Signal
+    binding: <Shift><Control><Alt><Super>c
+    command: vicinae deeplink vicinae://launch/applications/signal-desktop
+  - id: custom-keybindings/custom2
+    name: Ghostty
+    binding: <Shift><Control><Alt><Super>t
+    command: vicinae deeplink vicinae://launch/applications/com.mitchellh.ghostty
+  - id: custom-keybindings/custom3
+    name: Firefox
+    binding: <Shift><Control><Alt><Super>b
+    command: vicinae deeplink vicinae://launch/applications/firefox-esr
+  - id: custom-keybindings/custom8
+    name: Discord
+    binding: <Shift><Control><Alt><Super>d
+    command: vicinae deeplink vicinae://launch/applications/discord
+  - id: custom-keybindings/custom11
+    name: Visual Studio Code
+    binding: <Shift><Control><Alt><Super>v
+    command: vicinae toggle vicinae://launch/applications/com.microsoft.VSCode
+  - id: custom-keybindings/custom12
+    name: Miniflux
+    binding: <Shift><Control><Alt><Super>n
+    command: vicinae deeplink vicinae://launch/applications/chrome-mldjdkkldhkodidboncnoaggakffbbif-Default
+  - id: custom-keybindings/custom13
+    name: Paperless
+    binding: <Shift><Control><Alt><Super>p
+    command: vicinae deeplink vicinae://launch/applications/chrome-eiehgmphhaplpgpocfpemcfjliphekhg-Default
+  - id: custom-keybindings/custom16
+    name: Zotero
+    binding: <Shift><Control><Alt><Super>z
+    command: vicinae deeplink vicinae://launch/applications/zotero
+  - id: custom-keybindings/custom9
+    name: Vaultwarden
+    binding: <Shift><Control><Alt><Super>g
+    command: vicinae deeplink vicinae://launch/applications/chrome-gfmmmknjcphafdphmmokinkffkfifjef-Default
+  - id: custom-keybindings/custom4
+    name: Files
+    binding: <Shift><Control><Alt><Super>f
+    command: vicinae deeplink vicinae://launch/files/search
+  - id: custom-keybindings/custom5
+    name: Gmail
+    binding: <Shift><Control><Alt><Super>o
+    command: vicinae deeplink vicinae://launch/applications/chrome-fmgjjmmmlfnkbppncabfkddbjimcfncm-Default
+  - id: custom-keybindings/custom10
+    name: ChatGPT
+    binding: <Shift><Control><Alt><Super>x
+    command: vicinae deeplink vicinae://launch/applications/chatgpt

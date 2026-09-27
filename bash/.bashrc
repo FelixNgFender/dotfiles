@@ -1,3 +1,5 @@
+source ~/.env
+
 # Editor used by CLI
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
@@ -33,6 +35,10 @@ eval "$(mise activate bash)"
 
 # cargo
 . "$HOME/.cargo/env"
+
+# cuda
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
 # expose mason lsps to cli
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
@@ -74,6 +80,13 @@ eval "$(starship init bash)"
 
 # zoxide
 eval "$(zoxide init bash)"
+
+# for use in nvim-zotcite
+export ZOTERO_PATH="$HOME/Zotero"
+export ZOTERO_BIB="$ZOTERO_PATH/library.bib"
+
+# huggingface
+export HF_TOKEN=$HF_TOKEN
 
 # Auto-start tmux on interactive SSH connections
 if [[ -n "$PS1" ]] && [[ -n "$SSH_CONNECTION" ]] && [[ -z "$TMUX" ]]; then
