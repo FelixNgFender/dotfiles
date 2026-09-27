@@ -1,4 +1,4 @@
-tap "anomalyco/tap", "https://github.com/anomalyco/homebrew-tap.git", trusted: true
+tap "anomalyco/tap", trusted: true
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
@@ -42,7 +42,7 @@ brew "mpv"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # AI coding agent, built for the terminal
-brew "opencode"
+brew "opencode", link: false
 # Modern replacement for ps written in Rust
 brew "procs"
 # Rsync for cloud storage
@@ -67,4 +67,6 @@ brew "websocat"
 brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# OpenCode V2 - the AI coding agent for the terminal
+brew "anomalyco/tap/opencode-v2", trusted: true
 cargo "bacon"
