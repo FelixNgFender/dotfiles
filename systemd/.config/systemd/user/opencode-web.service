@@ -5,7 +5,8 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=%h
-ExecStart=/home/linuxbrew/.linuxbrew/bin/opencode web
+Environment=OPENCODE_PASSWORD=opencode
+ExecStart=/home/linuxbrew/.linuxbrew/bin/opencode serve --hostname 0.0.0.0 --port 4096
 Restart=on-failure
 RestartSec=5
 

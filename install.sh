@@ -20,5 +20,6 @@ sudo stow -t / keyd
 gshortcuts import gnome-shortcuts.yaml
 
 mise install
+sudo keyd reload
 systemctl --user enable --now opencode-web
 systemctl --user enable --now tmux
