@@ -11,8 +11,6 @@ brew "caddy"
 brew "cargo-binstall"
 # Display information on the cargo cache, plus optional cache pruning
 brew "cargo-cache"
-# Cloudflare Tunnel client (formerly Argo Tunnel)
-brew "cloudflared"
 # More intuitive version of du in rust
 brew "dust"
 # Modern, maintained replacement for ls
