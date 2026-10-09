@@ -88,8 +88,9 @@ export ZOTERO_BIB="$ZOTERO_PATH/library.bib"
 # huggingface
 export HF_TOKEN=$HF_TOKEN
 
-# Auto-start tmux on interactive SSH connections
-if [[ -n "$PS1" ]] && [[ -n "$SSH_CONNECTION" ]] && [[ -z "$TMUX" ]]; then
+# Auto-start tmux only on interactive SSH terminals
+if [[ $- == *i* && -n "$SSH_CONNECTION" && -z "$TMUX" ]] &&
+  [[ -t 0 && -t 1 ]]; then
   tmux attach-session -t "$HOSTNAME" || tmux new-session -s "$HOSTNAME"
   exit
 fi

@@ -45,6 +45,8 @@ brew "mpv"
 brew "neovim"
 # AI coding agent, built for the terminal
 brew "opencode", link: false
+# AI agent toolkit
+brew "pi-coding-agent"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Rsync for cloud storage
